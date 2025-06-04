@@ -23,31 +23,15 @@
 \contentsline {subsubsection}{\numberline {2.3.2}函数思想及实现}{28}{subsubsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.4}系统测试}{33}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}基本功能函数测试}{33}{subsubsection.2.4.1}%
-\contentsline {paragraph}{ 9.}{37}{paragraph*.31}%
-\contentsline {paragraph}{10.}{38}{paragraph*.33}%
-\contentsline {paragraph}{11.}{39}{paragraph*.35}%
-\contentsline {paragraph}{12.}{40}{paragraph*.37}%
-\contentsline {paragraph}{13.}{40}{paragraph*.39}%
-\contentsline {paragraph}{14.}{41}{paragraph*.41}%
 \contentsline {subsubsection}{\numberline {2.4.2}附加功能测试}{41}{subsubsection.2.4.2}%
-\contentsline {paragraph}{15.}{41}{paragraph*.43}%
-\contentsline {paragraph}{16.}{42}{paragraph*.45}%
-\contentsline {paragraph}{17.}{42}{paragraph*.47}%
-\contentsline {paragraph}{18.}{43}{paragraph*.49}%
-\contentsline {paragraph}{19.}{43}{paragraph*.50}%
-\contentsline {paragraph}{20.}{44}{paragraph*.52}%
-\contentsline {paragraph}{21.}{44}{paragraph*.54}%
-\contentsline {paragraph}{22.}{45}{paragraph*.56}%
-\contentsline {paragraph}{23.}{46}{paragraph*.58}%
-\contentsline {paragraph}{23.}{46}{paragraph*.60}%
-\contentsline {subsection}{\numberline {2.5}实验小结}{47}{subsection.2.5}%
-\contentsline {section}{\numberline {3}课程的收获和建议}{48}{section.3}%
-\contentsline {subsection}{\numberline {3.1}基于顺序存储结构的线性表实现}{48}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}基于链式存储结构的线性表实现}{48}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}基于二叉链表的二叉树实现}{48}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}基于邻接表的图实现}{48}{subsection.3.4}%
-\contentsline {section}{参考文献}{48}{subsection.3.4}%
-\contentsline {section}{\numberline {4}附录A 基于顺序存储结构线性表实现的源程序}{49}{section.4}%
-\contentsline {section}{\numberline {5}附录B 基于链式存储结构线性表实现的源程序}{65}{section.5}%
-\contentsline {section}{\numberline {6}附录C 基于二叉链表二叉树实现的源程序}{83}{section.6}%
-\contentsline {section}{\numberline {7}附录D 基于邻接表图实现的源程序}{104}{section.7}%
+\contentsline {subsection}{\numberline {2.5}实验小结}{46}{subsection.2.5}%
+\contentsline {section}{\numberline {3}课程的收获和建议}{47}{section.3}%
+\contentsline {subsection}{\numberline {3.1}基于顺序存储结构的线性表实现}{47}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}基于链式存储结构的线性表实现}{47}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}基于二叉链表的二叉树实现}{47}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}基于邻接表的图实现}{47}{subsection.3.4}%
+\contentsline {section}{参考文献}{47}{subsection.3.4}%
+\contentsline {section}{\numberline {4}附录A 基于顺序存储结构线性表实现的源程序}{48}{section.4}%
+\contentsline {section}{\numberline {5}附录B 基于链式存储结构线性表实现的源程序}{64}{section.5}%
+\contentsline {section}{\numberline {6}附录C 基于二叉链表二叉树实现的源程序}{82}{section.6}%
+\contentsline {section}{\numberline {7}附录D 基于邻接表图实现的源程序}{103}{section.7}%

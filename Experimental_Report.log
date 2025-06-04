@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2024.11.27)  4 JUN 2025 22:18
+This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2024.11.27)  4 JUN 2025 22:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1981,12 +1981,13 @@ Overfull \hbox (24.77174pt too wide) in paragraph at lines 1597--1614
 File: images/二叉树测试8.png Graphic file (type bmp)
 <images/二叉树测试8.png>
 
-
-[37]
 Overfull \hbox (10.36372pt too wide) in paragraph at lines 1640--1657
 [][] 
  []
 
+
+
+[37]
 File: images/二叉树测试9.png Graphic file (type bmp)
 <images/二叉树测试9.png>
 
@@ -1994,26 +1995,25 @@ Overfull \hbox (38.04848pt too wide) in paragraph at lines 1677--1694
 [][] 
  []
 
+File: images/二叉树测试10.png Graphic file (type bmp)
+<images/二叉树测试10.png>
 
 
 [38]
-File: images/二叉树测试10.png Graphic file (type bmp)
-<images/二叉树测试10.png>
 File: images/二叉树测试11.png Graphic file (type bmp)
 <images/二叉树测试11.png>
+File: images/二叉树测试12.png Graphic file (type bmp)
+<images/二叉树测试12.png>
 
 
 [39]
-File: images/二叉树测试12.png Graphic file (type bmp)
-<images/二叉树测试12.png>
 File: images/二叉树测试13.png Graphic file (type bmp)
 <images/二叉树测试13.png>
-
-
-[40]
 File: images/二叉树测试14.png Graphic file (type bmp)
 <images/二叉树测试14.png>
 
+
+[40]
 Overfull \hbox (24.96132pt too wide) in paragraph at lines 1830--1839
 [][] 
  []
@@ -2021,17 +2021,16 @@ Overfull \hbox (24.96132pt too wide) in paragraph at lines 1830--1839
 File: images/二叉树测试15.png Graphic file (type bmp)
 <images/二叉树测试15.png>
 
-
-[41]
 Overfull \hbox (24.96132pt too wide) in paragraph at lines 1861--1874
 [][] 
  []
 
+
+
+[41]
 File: images/二叉树测试16.png Graphic file (type bmp)
 <images/二叉树测试16.png>
 
-
-[42]
 Overfull \hbox (24.96132pt too wide) in paragraph at lines 1892--1903
 [][] 
  []
@@ -2039,20 +2038,19 @@ Overfull \hbox (24.96132pt too wide) in paragraph at lines 1892--1903
 File: images/二叉树测试17.png Graphic file (type bmp)
 <images/二叉树测试17.png>
 
+
+[42]
 Overfull \hbox (10.27693pt too wide) in paragraph at lines 1923--1934
 [][] 
  []
 
-
-
-[43]
 File: images/二叉树测试18_19.png Graphic file (type bmp)
 <images/二叉树测试18_19.png>
 File: images/二叉树测试20.png Graphic file (type bmp)
 <images/二叉树测试20.png>
 
 
-[44]
+[43]
 File: images/二叉树测试21.png Graphic file (type bmp)
 <images/二叉树测试21.png>
 
@@ -2065,12 +2063,14 @@ File: images/二叉树测试22.png Graphic file (type bmp)
 <images/二叉树测试22.png>
 
 
-[45]
+[44]
 File: images/二叉树测试23.png Graphic file (type bmp)
 <images/二叉树测试23.png>
 File: images/二叉树测试24.png Graphic file (type bmp)
 <images/二叉树测试24.png>
 
+
+[45]
 
 [46]
 
@@ -2242,9 +2242,7 @@ File: images/二叉树测试24.png Graphic file (type bmp)
 
 [130]
 
-[131]
-
-[132] (Experimental_Report.aux)
+[131] (Experimental_Report.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2022/08/05>
@@ -2261,12 +2259,12 @@ Package rerunfilecheck Info: File `Experimental_Report.out' has not changed.
 (rerunfilecheck)             Checksum: 42A92702747E5F6CF6E65D8BE7FA490C;2780.
  ) 
 Here is how much of TeX's memory you used:
- 43449 strings out of 408789
- 1020008 string characters out of 5748697
+ 43447 strings out of 408789
+ 1019974 string characters out of 5748697
  1892763 words of memory out of 5000000
- 65620 multiletter control sequences out of 15000+600000
+ 65618 multiletter control sequences out of 15000+600000
  575736 words of font info for 161 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  88i,12n,125p,738b,1833s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Experimental_Report.pdf (134 pages).
+Output written on Experimental_Report.pdf (133 pages).
