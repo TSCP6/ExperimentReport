@@ -227,7 +227,7 @@ typedef struct{  //线性表的集合类型定义
 
 线性表基本功能函数的实现：
 
-\paragraph{ 1.} status InitList (SqList \&L) 
+\noindent\textbf{ 1. }status InitList (SqList \&L)
 
 输入：线性表L
 
@@ -235,7 +235,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：初始化函数调用全局定义的线性表L，首先进行判空，如果为空，则对线性表的元素进行malloc分配内存，并将长度置为0，返回OK；如果不为空，则初始化失败，返回INFEASIBLE；
 
-\paragraph{ 2.} status DestroyList (SqList \&L)
+\noindent\textbf{ 2.} status DestroyList (SqList \&L)
 
 输入：线性表L
 
@@ -243,7 +243,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：销毁函数首先对L进行判空，如果为空，则无法销毁，返回INFEASIBLE；如果不为空，则释放L的elem数组的内存，并将长度等置为0，返回OK；
 
-\paragraph{ 3.}status ClearList (SqList \&L)
+\noindent\textbf{ 3.}status ClearList (SqList \&L)
 
 输入：线性表L
 
@@ -251,7 +251,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：清空函数首先对L判空，如果为空，则返回INFEASIBLE；如果不为空，则将其长度置为0，各元素置为0，返回OK；
 
-\paragraph{ 4.}status ListEmpty (SqList L)
+\noindent\textbf{ 4.}status ListEmpty (SqList L)
 
 输入：线性表L
 
@@ -259,7 +259,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：判空函数首先对L判空，如果为空，则返回INFEASIBLE；如果元素长度为0，则为空，返回TRUE；否则返回FALSE；
 
-\paragraph{ 5.}int ListLength (SqList L)
+\noindent\textbf{ 5.}int ListLength (SqList L)
 
 输入：线性表L
 
@@ -267,7 +267,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：求线性表的长度函数首先对L判空，如果为空，则返回INFEASIBLE；否则返回线性表L的长度；
 
-\paragraph{ 6.}status GetElem (SqList L, int i, ElemType \&e)
+\noindent\textbf{ 6.}status GetElem (SqList L, int i, ElemType \&e)
 
 输入：线性表L，元素位序i，元素值e；
 
@@ -275,7 +275,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：元素获取函数首先对L判空，如果为空，则返回INFEASIBLE；当i小于线性表长度时，对位序为i的元素赋值为e，返回OK；否则返回ERROR；
 
-\paragraph{ 7.}int LocateElem (SqList L, ElemType e)
+\noindent\textbf{ 7.}int LocateElem (SqList L, ElemType e)
 
 输入：线性表L，元素值e
 
@@ -283,7 +283,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：元素定位函数首先对L判空，如果为空，则返回INFEASIBLE；然后对线性表内的元素进行查找，找到则返回元素的位序；否则返回ERROR。
 
-\paragraph{ 8.}status PriorElem (SqList L, ElemType e, ElemType \&pre)
+\noindent\textbf{ 8.}status PriorElem (SqList L, ElemType e, ElemType \&pre)
 
 输入：线性表L，元素值e，待赋值元素pre
 
@@ -291,7 +291,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：获取前驱函数首先对L判空，如果为空，则返回INFEASIBLE；然后对线性表元素进行遍历，如果找到等于e的元素，且其位序大于0，则将位序为i-1的元素值赋值给pre，返回OK；否则返回ERROR。
 
-\paragraph{ 9.}status NextElem (SqList L, ElemType e, ElemType \&next)
+\noindent\textbf{ 9.}status NextElem (SqList L, ElemType e, ElemType \&next)
 
 输入：线性表L，元素值e，待赋值元素next
 
@@ -299,7 +299,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：获取后继元素函数首先对L判空，如果为空，则返回INFEASIBLE；然后付线性表元素进行遍历，如果找到等于e的元素，且位序小于线性表长度-1，则将位序为i+1的元素值赋值给next，返回OK；否则返回ERROR。
 
-\paragraph{10.}status ListInsert (SqList L, int i, ElemType e)
+\noindent\textbf{10.}status ListInsert (SqList L, int i, ElemType e)
 
 输入：线性表L，位序i，元素值e
 
@@ -307,7 +307,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：元素插入函数首先对L判空，如果为空，则返回INFEASIBLE；在i大于等于1且小于等于表长的情况下，将第i个元素后的元素后移，并将第i个位置的元素赋值为e，返回OK；如果线性表的长度已达最大，则重新分配更多内存；其他情况返回ERROR。
 
-\paragraph{11.}status ListDelete (SqList L, int i , ElemType \&e)
+\noindent\textbf{11.}status ListDelete (SqList L, int i , ElemType \&e)
 
 输入：线性表L，位序i，元素值e
 
@@ -315,7 +315,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：删除元素函数首先对L判空，如果为空，则返回INFEASIBLE；当i在1到表长的范围内，将位序为i-1的元素值赋值给e，并将后面的元素依次前移，表长减一，返回OK；否则返回ERROR。
 
-\paragraph{12.}status ListTraverse (SqList L)
+\noindent\textbf{12.}status ListTraverse (SqList L)
 
 输入：线性表L
 
@@ -325,7 +325,7 @@ typedef struct{  //线性表的集合类型定义
 
 附加功能函数的实现：
 
-\paragraph{13.}ElemType MaxSubArray(SqList L)
+\noindent\textbf{13.}ElemType MaxSubArray(SqList L)
 
 输入：线性表L
 
@@ -333,7 +333,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：求最大和函数首先对L判空，如果为空，则返回INFEASIBLE；在线性表长度不为0的情况下，假定最大值为第零位元素，对后面的元素依次判断，如果sum大于0，则sum等于sum+第i个元素，否则等于第i个元素；当sum大于maxsum时将其赋值给maxsum；遍历结束后返回maxsum，即为最大和。
 
-\paragraph{14.}status SubArrayNum(SqList L, int k)
+\noindent\textbf{14.}status SubArrayNum(SqList L, int k)
 
 输入：线性表L，值总和k
 
@@ -341,7 +341,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：求和为k子数组的函数首先对L判空，如果为空，则返回INFEASIBLE；首先置数目count为0，然后遍历每一个元素，对其后面的元素依次相加直到最后，如果和为k，则count加一，最终返回子数组个数count。
 
-\paragraph{15.}void sortList(SqList\& L)
+\noindent\textbf{15.}void sortList(SqList\& L)
 
 输入：线性表L
 
@@ -349,7 +349,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：使用冒泡排序对线性表的元素进行从小到大的排序
 
-\paragraph{16.}status SaveList (SqList L, char FileName [])
+\noindent\textbf{16.}status SaveList (SqList L, char FileName [])
 
 输入：线性表L，文件名FileName
 
@@ -357,7 +357,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：文件保存函数首先对L判空，如果为空，则返回INFEASIBLE；然后以“r”形式读取文件，如果fp不为空，则关闭文件进行“w”写入，以达到覆盖原有内容的目的；然后将线性表的元素依次写入到文件中，关闭文件返回OK；否则返回ERROR。
 
-\paragraph{17.}status LoadList (SqList L, char FileName [])
+\noindent\textbf{17.}status LoadList (SqList L, char FileName [])
 
 输入：线性表L，文件名FileName
 
@@ -365,7 +365,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：文件载入函数首先对L判空，如果为空，则返回INFEASIBLE；对文件以“r”只读方式打开，首先为L的元素分配内存，然后读取文件中的值到elem数组中，关闭文件返回OK；否则返回ERROR。
 
-\paragraph{18.}status AddList (LISTS \&Lists, char ListName [])
+\noindent\textbf{18.}status AddList (LISTS \&Lists, char ListName [])
 
 输入：顺序表数组Lists，表名ListName
 
@@ -373,7 +373,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：添加线性表的函数首先将表的数量加一，将表名赋值给最新的表的表名，初始化一个新的表l，并将该表传递给新表，返回OK；否则返回ERROR。
 
-\paragraph{19.}status RemoveList (LISTS List, char ListName [])
+\noindent\textbf{19.}status RemoveList (LISTS List, char ListName [])
 
 输入：顺序表数组Lists，数组名ListName
 
@@ -381,7 +381,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：线性表移除函数对表名进行查找，如果查找成功，则销毁该表，并对其后的线性表进行前移操作，返回OK；否则返回ERROR。
 
-\paragraph{20.}int LocateList (LISTS Lists, char ListName [])
+\noindent\textbf{20.}int LocateList (LISTS Lists, char ListName [])
 
 输入：顺序表数组Lists，文件名ListName
 
@@ -389,7 +389,7 @@ typedef struct{  //线性表的集合类型定义
 
 函数思想描述：位置查找函数遍历所有线性表，如果找到与指定名称相同的表，则返回其位置，否则返回ERROR。
 
-\paragraph{21.}void TraverseList(LISTS Lists)
+\noindent\textbf{21.}void TraverseList(LISTS Lists)
 
 输入：顺序表数组Lists
 
@@ -418,7 +418,7 @@ typedef struct{  //线性表的集合类型定义
 
 \subsubsection{基本功能函数测试}
 
-\paragraph{ 1.}InitList测试
+\noindent\textbf{ 1.}InitList测试
 
 测试1：测试函数是否能成功创建线性表；
 
@@ -446,7 +446,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{ 2.}DestroyList测试
+\noindent\textbf{ 2.}DestroyList测试
 
 测试1：测试函数是否能对不存在的线性表进行销毁；
 
@@ -478,7 +478,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{ 3.}ClearList测试
+\noindent\textbf{ 3.}ClearList测试
 
 测试1：测试函数是否能对不存在的线性表进行清空；
 
@@ -510,7 +510,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{ 4.}ListEmpty测试
+\noindent\textbf{ 4.}ListEmpty测试
 
 测试1：测试函数能否对不存在的线性表判空；
 
@@ -542,7 +542,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{ 5.}ListLength测试
+\noindent\textbf{ 5.}ListLength测试
 
 
 测试1：测试函数能否对不存在的线性表求长；
@@ -575,7 +575,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{ 6.}GetElem测试
+\noindent\textbf{ 6.}GetElem测试
 
 此函数的所有测试将在测试集1的情况下进行。
 
@@ -608,7 +608,7 @@ typedef struct{  //线性表的集合类型定义
  	\label{txlab}
  \end{figure}
 
-\paragraph{ 7.}LocateElem测试
+\noindent\textbf{ 7.}LocateElem测试
 
 此函数的所有测试将在测试集1的情况下进行。
 
@@ -640,7 +640,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{ 8.}PriorElem测试
+\noindent\textbf{ 8.}PriorElem测试
 
     此函数的所有测试将在测试集1的情况下进行。
 
@@ -674,7 +674,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{ 9.}NextElem测试
+\noindent\textbf{ 9.}NextElem测试
 
     此函数的所有测试将在测试集1的情况下进行。
 
@@ -708,7 +708,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{10.}ListInsert测试
+\noindent\textbf{10.}ListInsert测试
 
 	输入要求：依次输入插入元素位置和插入元素。
 
@@ -740,7 +740,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{11.}ListDelete测试
+\noindent\textbf{11.}ListDelete测试
 
 	输入要求：输入删除的序号
 
@@ -773,7 +773,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{12.}ListTraverse测试
+\noindent\textbf{12.}ListTraverse测试
 
 	测试1在线性表是空表的情况下进行，测试函数能否处理空表的情况；
 
@@ -803,7 +803,7 @@ typedef struct{  //线性表的集合类型定义
 
 \subsubsection{附加功能测试}
 
-\paragraph{13.}MaxSubArray测试
+\noindent\textbf{13.}MaxSubArray测试
 
 测试1：在没有创建线性表的情况下进行，测试函数能否正确判断线性表的存在性；
 	
@@ -831,7 +831,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{14.}SubArrayNum测试
+\noindent\textbf{14.}SubArrayNum测试
 	
 测试1：在没有创建线性表的情况下进行，测试函数能否正确判断线性表的存在性；
 
@@ -858,7 +858,7 @@ typedef struct{  //线性表的集合类型定义
  	\label{txlab}
  \end{figure}
 
-\paragraph{15.}sortList测试
+\noindent\textbf{15.}sortList测试
 
 测试1：在线性表存在的情况下进行，测试函数能否正确排序。
 
@@ -882,7 +882,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{16.}SaveList测试
+\noindent\textbf{16.}SaveList测试
 	
 测试1：在测试集1的情况下进行，测试函数能否正常进行写文件操作；
 
@@ -898,7 +898,7 @@ typedef struct{  //线性表的集合类型定义
 
 ~\
 
-\paragraph{17.}LoadList测试
+\noindent\textbf{17.}LoadList测试
 	
 本函数的测试都在文件1中已存有测试集1的情况下进行。
 
@@ -916,7 +916,7 @@ typedef struct{  //线性表的集合类型定义
 
 ~\
 
-\paragraph{18.}AddList测试
+\noindent\textbf{18.}AddList测试
 
 测试1：构建测试集2，测试线性表能否正确添加，通过遍历各个表检验正确性。
 
@@ -939,7 +939,7 @@ typedef struct{  //线性表的集合类型定义
  	\label{txlab}
  \end{figure}
 
-\paragraph{19.}RemoveList测试
+\noindent\textbf{19.}RemoveList测试
 
 本函数的测试在测试集2的基础上进行。
 
@@ -968,7 +968,7 @@ typedef struct{  //线性表的集合类型定义
  	\label{txlab}
  \end{figure}
 
-\paragraph{20.}LocateList测试
+\noindent\textbf{20.}LocateList测试
 	
 本函数的测试在测试集2的基础上进行。
 
@@ -998,7 +998,7 @@ typedef struct{  //线性表的集合类型定义
  \end{figure}
 
 
-\paragraph{21.}TraverseList测试
+\noindent\textbf{21.}TraverseList测试
 	
 测试1：在测试集2的基础上进行，测试函数能否正确遍历各个线性表；
 
@@ -1169,7 +1169,7 @@ typedef struct {
 
 二叉树基本功能函数的实现：
 
-\paragraph{ 1.} status CreateBiTree(BiTree \&T, TElemType definition[])
+\noindent\textbf{ 1.} status CreateBiTree(BiTree \&T, TElemType definition[])
 
 输入：二叉树T，TELemType类型数组
 
@@ -1177,7 +1177,7 @@ typedef struct {
 
 函数思想描述：创建二叉树函数，传入二叉树和TELemType类型数组。根据defination的位置判断奇偶来确定左右子树，最后将T赋值根节点，从而构建二叉树。
 
-\paragraph{ 2.} status DestroyBiTree(BiTree \&T)
+\noindent\textbf{ 2.} status DestroyBiTree(BiTree \&T)
     
 输入：二叉树T
 
@@ -1185,7 +1185,7 @@ typedef struct {
 
 函数思想描述：销毁二叉树函数，将二叉树设置成空，并删除所有结点，释放结点空间。在函数中，如果当前结点有左子树或右子树，则递归调用本函数依次销毁当前结点的左子树和右子树；如果当前结点的左右子树都为空指针时释放当前结点的存储空间，并将当前结点的指针设置为 NULL。
 
-\paragraph{ 3.}status ClearBiTree(BiTree \&T)
+\noindent\textbf{ 3.}status ClearBiTree(BiTree \&T)
     
 输入：二叉树T
 
@@ -1193,7 +1193,7 @@ typedef struct {
 
 函数思想描述：清空二叉树函数，将二叉树设置成空。在函数中，如果当前结点有左子树或右子树，则递归调用本函数依次清空当前结点的左子树和右子树。
 
-\paragraph{ 4.}status BiTreeEmpty(BiTree T)
+\noindent\textbf{ 4.}status BiTreeEmpty(BiTree T)
 
 输入：二叉树T
 
@@ -1201,7 +1201,7 @@ typedef struct {
 
 函数思想描述：判断树是否为空，如果根结点为空，则返回TRUE，否则说明树非空，返回FALSE。
 
-\paragraph{ 5.}int BiTreeDepth(BiTree T)
+\noindent\textbf{ 5.}int BiTreeDepth(BiTree T)
 
 输入：二叉树T
 
@@ -1209,7 +1209,7 @@ typedef struct {
 
 函数思想概述：求二叉树深度函数，依次遍历二叉树的左右结点，遇到空结点则返回0，不断比较获取二叉树到叶子结点的深度的较大值，作为二叉树的深度，最终结果即为二叉树深度。
 
-\paragraph{ 6.}BiTNode *LocateNode(BiTree T, KeyType e)
+\noindent\textbf{ 6.}BiTNode *LocateNode(BiTree T, KeyType e)
 
 输入：二叉树T，KeyType e
 
@@ -1217,7 +1217,7 @@ typedef struct {
 
 函数思想描述：查找二叉树中关键字结点函数，使用递归思想，若当前结点为目标结点，则返回当前结点的地址值；若当前结点指针为空，则说明此子树都没有所找结点，返回 NULL 指针；否则依次递归查找左右子树中是否有目标结点，并记录在左右子树查找的返回值。整个函数的返回值若为NULL，则说明整棵树没有目标结点，否则返回目标结点。
 
-\paragraph{ 7.}status Assign(BiTree \&T, KeyType e, TElemType value)
+\noindent\textbf{ 7.}status Assign(BiTree \&T, KeyType e, TElemType value)
 
 输入：二叉树T，KeyType e，TElemType value
 
@@ -1225,7 +1225,7 @@ typedef struct {
 
 函数思想描述：结点赋值函数，首先通过LocateNode函数查找用以替换的结点的关键字与除被替换结点以外的其他结点的关键字是否有重复，若重复则返回 ERROR。若无重复则调用 LocateNode 函数查找被替换结点，若未找到则返回 ERROR；若找到，则对该结点的关键字和关键信息进行赋值，并返回OK。
 
-\paragraph{ 8.}BiTNode *GetSibling(BiTree T, KeyType e)
+\noindent\textbf{ 8.}BiTNode *GetSibling(BiTree T, KeyType e)
 
 输入：二叉树T，KeyType e
 
@@ -1233,7 +1233,7 @@ typedef struct {
 
 函数思想概述：获得当前结点的兄弟结点函数，使用了递归思想，若当前结点为空则说明为空树，若当前结点无左右子树则说明当前结点不符合条件，返回 NULL；若当前结点有左右子树，则若左右子树其一结点关键字为所求，且另一子树存在，则找到兄弟结点，返回兄弟结点指针，若另一子树不存在，则该节点没有兄弟结点，返回 NULL；若当前结点的左右子树都不为指定节点，则递归调用此函数在左右子树中查找，并记录返回结果。整个函数若最终返回值为NULL 则说明该树没有此结点或此结点无兄弟节点；若返回值不为 NULL 则说明在某一子树中找到了指定节点的兄弟结点，返回该结点的值。
 
-\paragraph{ 9.}status InsertNode(BiTree \&T, KeyType e, int LR, TElemType c)
+\noindent\textbf{ 9.}status InsertNode(BiTree \&T, KeyType e, int LR, TElemType c)
 
 输入：二叉树T，KeyType e，整型变量 LR ，TElemType c
 
@@ -1241,7 +1241,7 @@ typedef struct {
 
 函数思想概述：插入结点函数，首先通过LocateNode 函数判断待插入结点在树中有无关键字重复，若有则返回 ERROR，若无重复则调用 LocateNode 函数查找被插入结点，然后根据 LR 为 0 或者 1，插入结点 c 到 T 中，作为关键字为 e 的结点的左或右孩子结点，结点 e 的原有左子树或右子树则为结点 c 的右子树，返回 OK。如果插入失败，返回 ERROR。特别地，当 LR 为-1 时，作为根结点插入，原根结点作为 c 的右子树，最后返回 OK。
 
-\paragraph{10.}status DeleteNode(BiTree \&T, KeyType e)
+\noindent\textbf{10.}status DeleteNode(BiTree \&T, KeyType e)
 
 输入：二叉树T，KeyType e
 
@@ -1249,7 +1249,7 @@ typedef struct {
 
 函数思想概述：删除结点函数，e 是 T 中结点关键字类型相同的给定值。删除 T 中关键字为 e 的结点；如果关键字为 e 的结点度为 0，删除即可；如关键字为 e 的结点度为 1，用关键字为 e 的结点孩子代替被删除的 e 位置；如关键字为 e 的结点度为 2，用 e 的左孩子代替被删除的 e 位置，e 的右子树作为 e 的左子树中最右结点的右子树。成功删除结点后返回 OK，否则返回ERROR。
 
-\paragraph{11.}status PreOrderTraverse(BiTree T, void (*visit)(BiTree))
+\noindent\textbf{11.}status PreOrderTraverse(BiTree T, void (*visit)(BiTree))
 
 输入：二叉树T，函数指针*visit
 
@@ -1257,7 +1257,7 @@ typedef struct {
 
 函数思想概述：先序遍历函数，采用了非递归算法。在函数中，若当前结点为空，则返回 ERROR；若当前结点不为空，则首先通过visit访问当前结点，然后利用栈的特性依次对左右子树结点进栈出栈实现遍历。
 
-\paragraph{12.}status InOrderTraverse(BiTree T, void (*visit)(BiTree))
+\noindent\textbf{12.}status InOrderTraverse(BiTree T, void (*visit)(BiTree))
 
 输入：二叉树T，函数指针*visit
 
@@ -1265,7 +1265,7 @@ typedef struct {
 
 函数思想概述：中序遍历函数，用递归算法实现。在函数中，若当前结点为空，则返回 ERROR；若当前结点不为空，则首先递归调用本函数依次中序遍历当前结点的左子树，根节点和右子树。
 
-\paragraph{13.}status PostOrderTraverse(BiTree T, void (*visit)(BiTree))
+\noindent\textbf{13.}status PostOrderTraverse(BiTree T, void (*visit)(BiTree))
 
 输入：二叉树T，函数指针*visit
 
@@ -1273,7 +1273,7 @@ typedef struct {
 
 函数思想概述：后序遍历函数，采用了递归思想。在函数中，若当前结点为空，则返回 ERROR；若当前结点不为空，则首先递归调用本函数依次后序遍历当前结点的左子树和右子树，然后访问当前结点。
 
-\paragraph{14.}status LevelOrderTraverse(BiTree T, void (*visit)(BiTree))
+\noindent\textbf{14.}status LevelOrderTraverse(BiTree T, void (*visit)(BiTree))
 
 输入：二叉树T，函数指针*visit
 
@@ -1283,7 +1283,7 @@ typedef struct {
 
 附加功能函数的实现：
 
-\paragraph{15.}int MaxPathSum(BiTree T)
+\noindent\textbf{15.}int MaxPathSum(BiTree T)
 
 输入：二叉树T
 
@@ -1291,7 +1291,7 @@ typedef struct {
 
 函数思想描述：最大路径和函数，通过不断递归到叶子节点到空树，比较左右子节点的大小，选择较大值直到无法继续，然后返回路径上的最大值。
 
-\paragraph{16.}BiTree LowestCommonAncestor(BiTree T, int e1, int e2)
+\noindent\textbf{16.}BiTree LowestCommonAncestor(BiTree T, int e1, int e2)
 
 输入：二叉树T，整型变量 e1，整型变量 e2
 
@@ -1303,7 +1303,7 @@ typedef struct {
 
 空间复杂度：O(1)
 
-\paragraph{17.}status InvertTree(BiTree \&T)
+\noindent\textbf{17.}status InvertTree(BiTree \&T)
 
 输入：二叉树T
 
@@ -1315,7 +1315,7 @@ typedef struct {
 
 空间复杂度：O(1)
 
-\paragraph{18.}status SaveBiTree(BiTree T, char FileName[])
+\noindent\textbf{18.}status SaveBiTree(BiTree T, char FileName[])
 
 输入：二叉树T，字符串变量 FileName
 
@@ -1323,7 +1323,7 @@ typedef struct {
 
 函数思想描述：文件保存函数，将二叉树的结点数据写入到文件 FileName 中。该函数借助SaveBiTreeHelper函数实现递归算法遍历，并将遍历结果写入文件中。
 
-\paragraph{19.}status LoadBiTree(BiTree \&T,  char FileName[])
+\noindent\textbf{19.}status LoadBiTree(BiTree \&T,  char FileName[])
 
 输入：二叉树T，字符串变量 FileName
 
@@ -1331,7 +1331,7 @@ typedef struct {
 
 函数思想描述：文件载入函数，将文件 FileName 中的数据读取到空树中，该函数借助LoadBiTreeHelper函数实现递归算法遍历，并以先序遍历的顺序写入空树中。
 
-\paragraph{20.}status AddBiTree(TREES \&trees,char TreeName[])
+\noindent\textbf{20.}status AddBiTree(TREES \&trees,char TreeName[])
 
 输入：结构体类型变量trees，字符串类型 TreeName
 
@@ -1339,7 +1339,7 @@ typedef struct {
 
 函数思想描述：增加树函数，在trees数组尾部新增树，并将树名称存储在该树结点的 name 分量当中。在添加二叉树之前，判断名称是否唯一，如果树的数量超过设定数目也会返回ERROR。
 
-\paragraph{21.}status RemoveTree(TREES \&trees,char TreeName[])
+\noindent\textbf{21.}status RemoveTree(TREES \&trees,char TreeName[])
 
 输入：结构体类型变量trees，字符串类型 TreeName
 
@@ -1347,7 +1347,7 @@ typedef struct {
 
 函数思想描述：销毁树函数，在 trees数组中查找名称为 TreeName 的树，查找成功则将其删除，否则返回ERROR。
 
-\paragraph{22.}int LocateTree(TREES trees,char TreeName[])
+\noindent\textbf{22.}int LocateTree(TREES trees,char TreeName[])
 
 输入：结构体类型变量trees，字符串类型 TreeName
 
@@ -1355,7 +1355,7 @@ typedef struct {
 
 函数思想描述：查找二叉树函数，在 trees数组中查找名称为 ListName 的树，查找成功返回其位序，否则返回ERROR。
 
-\paragraph{23.}status SwitchTrees(TREES trees, char TreeName[], BiTree \&T)
+\noindent\textbf{23.}status SwitchTrees(TREES trees, char TreeName[], BiTree \&T)
 
 输入：结构体类型变量trees，字符串类型 TreeName，当前操作数T
 
@@ -1363,7 +1363,7 @@ typedef struct {
 
 函数思想描述：切换二叉树函数，将trees中名称为TreeName的树赋值给主函数中的树T，后续可调用其他函数将对此二叉树进行操作。
 
-\paragraph{24.}status ShowAllTrees(TREES trees)
+\noindent\textbf{24.}status ShowAllTrees(TREES trees)
 
 输入：结构体类型变量trees
 
@@ -1381,7 +1381,7 @@ typedef struct {
 
 \subsubsection{基本功能函数测试}
 
-\paragraph{ 1.}.CreateBiTree测试
+\noindent\textbf{ 1.}.CreateBiTree测试
 
 测试1：将使用测试集1，测试函数能否正确构造二叉树，通过先序遍历和中序遍历的方法来检验正确性；
 
@@ -1412,7 +1412,7 @@ typedef struct {
  	\label{txlab}
  \end{figure}
 
-\paragraph{ 2.}DestroyBiTree测试
+\noindent\textbf{ 2.}DestroyBiTree测试
 
 测试1：在测试集1的情况下进行，测试函数能否销毁已存在的二叉树。
 
@@ -1439,7 +1439,7 @@ typedef struct {
  	\label{txlab}
  \end{figure}
 
-\paragraph{ 3.}ClearBiTree测试
+\noindent\textbf{ 3.}ClearBiTree测试
 
 测试1：在测试集1的情况下进行，测试函数能否清空已存在的二叉树。
 
@@ -1466,7 +1466,7 @@ typedef struct {
  	\label{txlab}
  \end{figure}
 
-\paragraph{ 4.}BiTreeEmpty测试
+\noindent\textbf{ 4.}BiTreeEmpty测试
 
 测试1：在测试集1的基础上，测试函数是否能对非空二叉树进行判空。
 
@@ -1493,7 +1493,7 @@ typedef struct {
  	\label{txlab}
  \end{figure}
 
-\paragraph{ 5.}BiTreeDepth测试
+\noindent\textbf{ 5.}BiTreeDepth测试
 
 测试1：测试函数能否对空二叉树求深度；
 
@@ -1520,7 +1520,7 @@ typedef struct {
  	\label{txlab}
  \end{figure}
 
-\paragraph{ 6.}LocateNode测试 
+\noindent\textbf{ 6.}LocateNode测试 
 
 测试1：将测试函数能否正确找到头结点并输出其值；
 
@@ -1551,7 +1551,7 @@ typedef struct {
  	\label{txlab}
  \end{figure}
 
-\paragraph{ 7.}Assign测试
+\noindent\textbf{ 7.}Assign测试
 
 测试1：将测试在修改结点值时，函数能否输出正确结果（通过先序遍历结果判断）；
 
@@ -1584,7 +1584,7 @@ typedef struct {
  	\label{txlab}
  \end{figure}
 
-\paragraph{ 8.}GetSibling测试
+\noindent\textbf{ 8.}GetSibling测试
 
 测试1,2：将输入一组互为兄弟的结点，测试函数能否输出正确结果；
 
@@ -2142,34 +2142,2719 @@ typedef struct {
 \bibliographystyle{HustGraduPaper}
 \begin{thebibliography}{}
 \bibitem[]{1}严蔚敏等.数据结构（C语言版）.清华大学出版社
-\bibitem[] {2}Larry Nyhoff. ADTs, Data Structures, and Problem Solving with C++.  Second Edition,Calvin College,2005
-\bibitem[] {3}殷立峰. Qt C++跨平台图形界面程序设计基础. 清华大学出版社,2014:192～197
-\bibitem[] {4}严蔚敏等.数据结构题集（C语言版）.清华大学出版社
+\bibitem[]{2}严蔚敏等.数据结构题集（C语言版）.清华大学出版社
 \end{thebibliography}
 
 \section{附录A 基于顺序存储结构线性表实现的源程序}
 
 \begin{lstlisting}[language=c]
+#include <malloc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define TRUE 1
+#define FALSE 0 
+#define OK 1
+#define ERROR 0
+#define INFEASIBLE -1
+#define OVERFLOW -2
+typedef int status;
+typedef int ElemType;
+#define LIST_INIT_SIZE 100
+#define LISTINCREMENT 10
+typedef struct {    //顺序表（顺序存储结构）结点的定义
+    ElemType *elem;
+    int length;
+    int listsize;
+} SqList;
+typedef struct {    //线性表（顺序存储结构）结点的定义
+    struct {
+        char name[30];
+        SqList L;
+    } elem[10];
+    int length;
+    int listsize;
+} LISTS;
+status InitList(SqList &L) {// 初始化顺序表，分配空间
+    if (L.elem != NULL)
+        return INFEASIBLE;
+    L.elem = (ElemType *)malloc(LIST_INIT_SIZE * sizeof(ElemType));
+    L.length = 0;
+    L.listsize = LIST_INIT_SIZE;
+    return OK;
+}
+status DestroyList(SqList &L) {// 销毁顺序表，释放内存
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    else {
+        free(L.elem);
+        L.elem = NULL;
+        L.length = 0;
+        L.listsize = 0;
+        return OK;
+    }
+}
+status ClearList(SqList &L) {// 清空顺序表内容但不释放空间
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    L.length = 0;
+    return OK;
+}
+status ListEmpty(SqList L) {// 判断顺序表是否为空
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    if (L.length == 0)
+        return TRUE;
+    else
+        return FALSE;
+}
+status ListLength(SqList L) {// 获取顺序表长度
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    return L.length;
+}
+status GetElem(SqList L, int i, ElemType &e) {// 获取顺序表第i个元素
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    if (i >= 0 && i <= L.length) {
+        if (i == 0)
+            return ERROR;
+        e = L.elem[i - 1];
+        return OK;
+    } else
+        return ERROR;
+}
+int LocateElem(SqList L, ElemType e) {// 查找元素e在线性表中的位置
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    for (int i = 0; i < L.length; i++)
+        if (L.elem[i] == e)
+            return i + 1;
+    return ERROR;
+}
+status PriorElem(SqList L, ElemType e, ElemType &pre) {// 获取元素e的前驱
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    for (int i = 0; i < L.length; i++) {
+        if (L.elem[i] == e && i > 0) {
+            pre = L.elem[i - 1];
+            return OK;
+        }
+    }
+    return ERROR;
+}
+status NextElem(SqList L, ElemType e, ElemType &next) {// 获取元素e的后继
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    for (int i = 0; i < L.length; i++) {
+        if (L.elem[i] == e && i < L.length - 1) {
+            next = L.elem[i + 1];
+            return OK;
+        }
+    }
+    return ERROR;
+}
+status ListInsert(SqList &L, int i, ElemType e) {// 在第i个位置插入元素e
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    if (i < 1 || i > L.length + 1)
+        return ERROR;
+    if (L.length >= L.listsize) {
+        ElemType *newElem = (ElemType *)realloc(L.elem, (L.listsize + LISTINCREMENT) * sizeof(ElemType));
+        if (!newElem)
+            return OVERFLOW;
+        L.elem = newElem;
+        L.listsize += LISTINCREMENT;
+    }
+    for (int k = L.length - 1; k >= i - 1; k--)
+        L.elem[k + 1] = L.elem[k];
+    L.elem[i - 1] = e;
+    L.length++;
+    return OK;
+}
+status ListDelete(SqList &L, int i, ElemType &e) {// 删除第i个元素，并用e返回其值
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    if (i < 1 || i > L.length)
+        return ERROR;
+    e = L.elem[i - 1];
+    for (int k = i - 1; k < L.length - 1; k++)
+        L.elem[k] = L.elem[k + 1];
+    L.length--;
+    return OK;
+}
+status ListTrabverse(SqList L) {// 遍历顺序表并输出所有元素
+    int i;
+    for (i = 0; i < L.length; i++)
+        printf("%d ", L.elem[i]);
+    printf("\n");
+    return OK;
+}
+ElemType MaxSubArray(SqList L) {// 求最大连续子数组和
+    if (L.elem == NULL)
+        return ERROR;
+    if (L.length) {
+        ElemType maxSum = L.elem[0];
+        ElemType sum = L.elem[0];
+        for (int i = 1; i < L.length; i++) {
+            sum = (sum + L.elem[i] > L.elem[i]) ? sum + L.elem[i] : L.elem[i];
+            if (sum > maxSum)
+                maxSum = sum;
+        }
+        return maxSum;
+    }
+}
+int SubArrayNum(SqList L, ElemType k) {// 求和为k的子数组个数
+    if (L.elem == NULL)
+        return ERROR;
+    int count = 0;
+    for (int i = 0; i < L.length; i++) {
+        int sum = 0;
+        for (int j = i; j < L.length; j++) {
+            sum += L.elem[j];
+            if (sum == k)
+                count++;
+        }
+    }
+    return count;
+}
+void sortList(SqList L) {// 冒泡排序顺序表
+    if (L.elem == NULL)
+        printf("No number to sort !\n");
+    for (int i = 0; i < L.length; i++)
+        for (int j = 0; j < L.length - i - 1; j++)
+            if (L.elem[j] > L.elem[j + 1]) {
+                int temp = L.elem[j + 1];
+                L.elem[j + 1] = L.elem[j];
+                L.elem[j] = temp;
+            }
+}
+status SaveList(SqList L, char FileName[]) {// 保存顺序表到文件
+    if (L.elem == NULL)
+        return INFEASIBLE;
+    FILE *fp;
+    fp = fopen(FileName, "r");
+    if (fp) {
+        fclose(fp);
+        fp = fopen(FileName, "w");
+    } else {
+        fp = fopen(FileName, "w");
+    }
+    if (!fp)
+        return ERROR;
+    for (int i = 0; i < L.length; i++)
+        fprintf(fp, "%d ", L.elem[i]);
+    fclose(fp);
+    return OK;
+}
+status LoadList(SqList &L, char FileName[]) {// 从文件加载顺序表
+    if (L.elem != NULL)
+        return INFEASIBLE;
+    FILE *fp;
+    fp = fopen(FileName, "r");
+    if (!fp)
+        return ERROR;
+    L.elem = (ElemType *)malloc(sizeof(ElemType) * LIST_INIT_SIZE);
+    if (!L.elem) {
+        fclose(fp);
+        return OVERFLOW;
+    }
+    L.length = 0;
+    L.listsize = LIST_INIT_SIZE;
+    ElemType e;
+    while (fscanf(fp, "%d", &e) == 1) {
+        L.elem[L.length++] = e;
+    }
 
+    fclose(fp);
+    return OK;
+}
+status AddList(LISTS &Lists, char ListName[]) {// 向LISTS结构中添加新顺序表
+    Lists.length++;
+    strcpy(Lists.elem[Lists.length - 1].name, ListName);
+    SqList l;
+    l.elem = NULL;
+    InitList(l);
+    Lists.elem[Lists.length - 1].L = l;
+    return OK;
+}
+status RemoveList(LISTS &Lists, char ListName[]) {// 参数：Lists为顺序表集合，ListName为要移除的顺序表名
+    int k = 0;
+    int isfound = 0;
+    for (int i = 0; i < Lists.length; i++) {
+        if (strcmp(Lists.elem[i].name, ListName) == 0) {// 查找要删除的顺序表
+            DestroyList(Lists.elem[i].L); // 释放该顺序表内存
+            k = i;
+            isfound = 1;
+        }
+    }
+    if (isfound) {
+        for (int j = k; j < Lists.length - 1; j++)
+            Lists.elem[j] = Lists.elem[j + 1];// 如果找到则后续顺序表前移
+        Lists.length--;
+        return OK;
+    }
+    return ERROR;
+}
+int LocateList(LISTS Lists, char ListName[]) {// 查找LISTS结构中顺序表的位置
+    for (int i = 0; i < Lists.length; i++) {
+        if (strcmp(Lists.elem[i].name, ListName) == 0)
+            return i + 1;// 返回顺序表在集合中的下标+1，未找到返回ERROR
+    }
+    return ERROR;
+}
+void ShowAllLists(LISTS lists) {// 显示所有顺序表及其内容
+    for (int i = 0; i < lists.length; i++) {
+        printf("%s ", lists.elem[i].name);
+        for (int j = 0; j < lists.elem[i].L.length; j++)
+            printf("%d ", lists.elem[i].L.elem[j]);// 依次输出每个顺序表的名字和所有元素
+        printf("\n");
+    }
+}
+#include "def.h"
+#include "system1Func.h"
+int main() {
+    SqList L;
+    L.elem = NULL;
+    LISTS lists;
+    lists.length = 0;
+    lists.listsize = LIST_INIT_SIZE;
+    int op = 1;
+    printf("      Menu for Linear Table On Sequence Structure\n"
+           "-------------------------------------------------\n"
+           "1. InitList       12.ListTrabverse\n"
+           "2. DestroyList    13.MaxSubArray\n"
+           "3. ClearList      14.SubArrayNum\n"
+           "4. ListEmpty      15.sortList\n"
+           "5. ListLength     16.SaveList\n"
+           "6. GetElem        17.LoadList\n"
+           "7. LocateElem     18.AddList\n"
+           "8. PriorElem      19.RemoveList\n"
+           "9. NextElem       20.LocateList\n"
+           "10.ListInsert     21.ShowAllLists\n"
+           "11.ListDelete     0. Exit\n"
+           "-------------------------------------------------\n");
+    while (op) {
+        printf("\n Choose you operation : ");
+        scanf("%d", &op);
+        switch (op) {
+        case 1:
+            if (InitList(L) == OK)
+                printf("Linear table was successfully created !\n");
+            else
+                printf("Linear table creation failed !\n");
+            getchar();
+            break;
+        case 2:
+            if (DestroyList(L) == OK)
+                printf("Linear table was successfully destroyed !\n");
+            else
+                printf("Linear table destruction failed !\n");
+            getchar();
+            break;
+        case 3:
+            if (ClearList(L) == OK)
+                printf("Linear table was successfully cleared !\n");
+            else
+                printf("Linear table clear failed !\n");
+            getchar();
+            break;
+        case 4:
+            if (ListEmpty(L) == TRUE)
+                printf("The linear table is empty !\n");
+            else
+                printf("The linear table is not empty !\n");
+            getchar();
+            break;
+        case 5:
+            if (ListLength(L) != INFEASIBLE)
+                printf("The length of this linear table is %d !\n", ListLength(L));
+            getchar();
+            break;
+        case 6:
+            printf("Please choose the position of your number (1 to length) : ");
+            int pos;
+            ElemType res;
+            scanf("%d", &pos);
+            if (GetElem(L, pos, res) == OK)
+                printf("The number is %d !\n", res);
+            else
+                printf("The position is illegal !\n");
+            getchar();
+            break;
+        case 7:
+            printf("Please enter the number you want to locate : ");
+            ElemType loc;
+            scanf("%d", &loc);
+            if (LocateElem(L, loc))
+                printf("The number is located on the position of %d !\n", LocateElem(L, loc));
+            else
+                printf("The number does not exist !\n");
+            getchar();
+            break;
+        case 8:
+            printf("Please enter your number : ");
+            ElemType num, pre;
+            scanf("%d", &num);
+            if (PriorElem(L, num, pre) == OK)
+                printf("The prior number is %d !\n", pre);
+            else
+                printf("This number does not have a prior number in the table !\n");
+            getchar();
+            break;
+        case 9:
+            printf("Please enter your number : ");
+            ElemType numD, next;
+            scanf("%d", &numD);
+            if (NextElem(L, numD, next) == OK)
+                printf("The next number is %d !\n", next);
+            else
+                printf("This number does not have a next number in the table !\n");
+            getchar();
+            break;
+        case 10:
+            printf("Please choose your position and number to insert : ");
+            int pos1;
+            ElemType num1;
+            scanf("%d%d", &pos1, &num1);
+            if (ListInsert(L, pos1, num1) == OK)
+                printf("The number is successfully inserted !\n");
+            else
+                printf("ListInsert failed !\n");
+            getchar();
+            break;
+        case 11:
+            printf("Please choose the position to delete : ");
+            int pos2;
+            ElemType num2;
+            scanf("%d", &pos2);
+            if (ListDelete(L, pos2, num2) == OK)
+                printf("The number is successfully deleted !\n");
+            else
+                printf("Deletion failed !\n");
+            getchar();
+            break;
+        case 12:
+            if (!ListTrabverse(L))
+                printf("The list is empty \n");
+            getchar();
+            break;
+        case 13:
+            if (L.elem == NULL)
+                printf("No element to sum !\n");
+            else
+                printf("MaxSum is %d \n", MaxSubArray(L));
+            getchar();
+            break;
+        case 14:
+            printf("Enter the sum you want to find : ");
+            ElemType k;
+            scanf("%d", &k);
+            if (L.elem == NULL)
+                printf("No element to sum !\n");
+            else
+                printf("The number of this arraySum is : %d !\n", SubArrayNum(L, k));
+            getchar();
+            break;
+        case 15:
+            if (L.elem == NULL)
+                printf("No elem to sort!\n");
+            else {
+                sortList(L);
+                printf("List sorted !\n");
+            }
+            getchar();
+            break;
+        case 16: {
+            char filename[] = "c:\\Users\\12841\\Desktop\\none\\2025springDS\\experiments\\ex1\\list1.txt";
+            if (SaveList(L, filename) == OK)
+                printf("Saved successfully !\n");
+            else
+                printf("Saving failed\n");
+            getchar();
+            break;
+        }
+        case 17: {
+            char filename[] = "c:\\Users\\12841\\Desktop\\none\\2025springDS\\experiments\\ex1\\list1.txt";
+            SqList l;
+            l.elem = NULL;
+            if (l.elem != NULL)
+                printf("List is not empty !\n");
+            if (LoadList(l, filename) == OK)
+                printf("Load successfully !\n");
+            else
+                printf("Loading failed !\n");
+            printf("Do you want to check the list (Y/N) : ");
+            char opt;
+            getchar();
+            scanf("%c", &opt);
+            if (opt == 'Y' || opt == 'y')
+                ListTrabverse(l);
+            else
+                break;
+            getchar();
+            break;
+        }
+        case 18: {
+            printf("Please enter your listname : ");
+            char name[100];
+            scanf("%s", name);
+            if (AddList(lists, name) == OK) {
+                printf("Please enter your elements amount and members : ");
+                int len;
+                scanf("%d", &len);
+                lists.elem[lists.length - 1].L.length = len;
+                for (int i = 0; i < len; i++)
+                    scanf("%d", &lists.elem[lists.length - 1].L.elem[i]);
+                printf("List added !\n");
+            }
+            else
+                printf("Failed !\n");
+            getchar();
+            break;
+        }
+        case 19:
+            printf("Enter the listname to remove : ");
+            char name2[100];
+            scanf("%s", name2);
+            if (RemoveList(lists, name2) == OK)
+                printf("List removed !\n");
+            else
+                printf("Cant remove the list !\n");
+            getchar();
+            break;
+        case 20:
+            printf("Enter the name to locate : ");
+            char name3[100];
+            scanf("%s", name3);
+            if (LocateList(lists, name3))
+                printf("The position is : %d \n", LocateList(lists, name3));
+            else
+                printf("The list does not exist !\n");
+            getchar();
+            break;
+        case 21:
+            ShowAllLists(lists);
+            getchar();
+            break;
+        case 0:
+            break;
+        }
+        // printf("Press enter to continue ...");
+        // getchar();
+    }
+    printf("Welcome to the system next time !\n");
+    return 0;
+}
 \end{lstlisting}
 
 \newpage
 \section{附录B 基于链式存储结构线性表实现的源程序}
 
 \begin{lstlisting}[language=c]
-
+#include <malloc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define TRUE 1
+#define FALSE 0
+#define OK 1
+#define ERROR 0
+#define INFEASIBLE -1
+#define OVERFLOW -2
+typedef int status;
+typedef int ElemType; // 数据元素类型定义
+#define LIST_INIT_SIZE 100
+#define LISTINCREMENT 10
+typedef int ElemType;
+typedef struct LNode { // 单链表（链式结构）结点的定义
+    ElemType data;
+    struct LNode *next;
+} LNode, *LinkList;
+typedef struct {
+    struct {
+        char name[30];
+        LinkList Li;
+    } elem[10];
+    int length;
+    int listsize;
+} LISTS;
+status InitList(LinkList &L) {
+    if (L != NULL)
+        return INFEASIBLE;               // 已初始化则返回不可行
+    L = (LinkList)malloc(sizeof(LNode)); // 分配头结点
+    L->next = NULL;                      // 初始化为空链表
+    return OK;
+}
+status DestroyList(LinkList &L) {
+    if (L == NULL)
+        return INFEASIBLE; // 未初始化
+    LinkList p = L, q;
+    while (p) {
+        q = p->next;
+        free(p); // 释放每个结点
+        p = q;
+    }
+    L = NULL; // 头指针置空
+    return OK;
+}
+status ClearList(LinkList &L) {
+    if (L == NULL)
+        return INFEASIBLE;
+    LinkList p = L->next, q;
+    while (p) {
+        q = p->next;
+        p->data = 0;
+        p->next = NULL;
+        p = q;
+    }
+    L->next = NULL;
+    return OK;
+}
+status ListEmpty(LinkList L) {
+    if (L == NULL)
+        return INFEASIBLE;
+    if (L != NULL && L->next == NULL)
+        return OK;
+    else if (L->next != NULL)
+        return ERROR;
+}
+int ListLength(LinkList L) {
+    if (L == NULL)
+        return INFEASIBLE;
+    LinkList p = L->next;
+    int len = 0;
+    while (p) {
+        len++;
+        p = p->next;
+    }
+    return len;
+}
+status GetElem(LinkList L, int i, ElemType &e) {
+    if (L == NULL)
+        return INFEASIBLE;
+    if (i < 1)
+        return ERROR;
+    LinkList p = L->next;
+    int len = 0;
+    while (p) {
+        len++;
+        i--;
+        if (i == 0) {
+            e = p->data;
+            return OK;
+        }
+        p = p->next;
+    }
+    if (i != 0)
+        return ERROR;
+}
+status LocateElem(LinkList L, ElemType e, char mode) {
+    if (L == NULL)
+        return INFEASIBLE;
+    int i = 1;
+    LinkList p = L->next;
+    while (p) {
+        if (mode == '>') {
+            if (p->data > e)
+                return i;
+        } else if (mode == '<') {
+            if (p->data < e)
+                return i;
+        } else if (mode == '=') {
+            if (p->data == e)
+                return i;
+        } else {
+            printf("The mode is illegal \n");
+            break;
+        }
+        i++;
+        p = p->next;
+    }
+    return ERROR;
+}
+status PriorElem(LinkList L, ElemType e, ElemType &pre) {
+    if (L == NULL)
+        return INFEASIBLE;
+    LinkList p = L->next, q = L;
+    while (p) {
+        if (e == p->data) {
+            if (p == L->next)
+                return ERROR;
+            pre = q->data;
+            return OK;
+        }
+        q = p;
+        p = p->next;
+    }
+    return ERROR;
+}
+status NextElem(LinkList L, ElemType e, ElemType &next) {
+    if (L == NULL)
+        return INFEASIBLE;
+    LinkList p = L->next;
+    while (p) {
+        if (p->next == NULL)
+            return ERROR;
+        if (p->data == e) {
+            next = p->next->data;
+            return OK;
+        }
+        p = p->next;
+    }
+    return ERROR;
+}
+status ListInsert(LinkList &L, int i, ElemType e) {
+    if (L == NULL)
+        return INFEASIBLE;
+    LinkList q = L;
+    while (q) {
+        i--;
+        if (!i) {
+            LinkList s = (LinkList)malloc(sizeof(LNode));
+            s->data = e;
+            s->next = q->next;
+            q->next = s;
+            return OK;
+        }
+        q = q->next;
+    }
+    return ERROR;
+}
+status ListDelete(LinkList &L, int i, ElemType &e) {
+    if (L == NULL)
+        return INFEASIBLE;
+    LinkList p = L, q = L->next;
+    while (q) {
+        i--;
+        if (!i) {
+            p->next = q->next;
+            e = q->data;
+            free(q);
+            return OK;
+        }
+        p = q;
+        q = q->next;
+    }
+    return ERROR;
+}
+status ListTraverse(LinkList L) {
+    if (L == NULL)
+        return INFEASIBLE;
+    LinkList p = L->next;
+    while (p) {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+    printf("\n");
+    return OK;
+}
+status ReverseList(LinkList L) {
+    if (L == NULL)
+        return INFEASIBLE; // 链表未初始化
+    if (L->next == NULL)
+        return OK; // 空链表无需反转
+    LinkList p = L->next, q;
+    L->next = NULL; // 断开原链表
+    while (p) {
+        q = p->next;       // 暂存下一个结点
+        p->next = L->next; // 头插法反转
+        L->next = p;       // 新头结点
+        p = q;             // 继续下一个
+    }
+    return OK;
+}
+status RemoveNthFromEnd(LinkList L, int n) {
+    if (L == NULL || L->next == NULL)
+        return INFEASIBLE;   // 空链表
+    int len = ListLength(L); // 获取长度
+    ElemType res;
+    if (n > len || n < 1)
+        return ERROR; // n非法
+    if (ListDelete(L, len + 1 - n, res) == OK)
+        return OK; // 删除倒数第n个
+}
+void sortList(LinkList L) {
+    LinkList head = L->next, p = head->next, q;
+    head->next = NULL; // 断开原链表
+    while (p) {
+        q = p->next; // 暂存下一个
+        LinkList pre = L, cur = L->next;
+        while (cur && cur->data < p->data) {
+            pre = cur;
+            cur = cur->next;
+        }
+        p->next = cur; // 插入到合适位置
+        pre->next = p;
+        p = q;
+    }
+}
+status SaveList(LinkList L, char FileName[]) {
+    if (L == NULL)
+        return INFEASIBLE; // 未初始化
+    FILE *fp = fopen(FileName, "r");
+    if (fp) {
+        fclose(fp);
+        fp = fopen(FileName, "w");
+    } else {
+        fp = fopen(FileName, "w");
+    }
+    if (!fp)
+        return ERROR; // 打开失败
+    LinkList p = L->next;
+    while (p) {
+        fprintf(fp, "%d ", p->data); // 写入数据
+        p = p->next;
+    }
+    fclose(fp);
+    return OK;
+}
+status LoadList(LinkList &L, char FileName[]) {
+    if (L != NULL)
+        return INFEASIBLE; // 已初始化
+    FILE *fp = fopen(FileName, "r");
+    if (!fp)
+        return ERROR; // 文件不存在
+    LinkList tail;
+    L = (LinkList)malloc(sizeof(LinkList)); // 分配头结点
+    tail = L;
+    ElemType e;
+    while (fscanf(fp, "%d", &e) == 1) {
+        LinkList node = (LinkList)malloc(sizeof(LinkList)); // 新结点
+        tail->next = node;
+        node->data = e;
+        tail = tail->next;
+        tail->next = NULL;
+    }
+    fclose(fp);
+    return OK;
+}
+status AddList(LISTS &Lists, char ListName[]) {
+    for (int i = 0; i < Lists.length; i++)
+        if (strcmp(Lists.elem[i].name, ListName) == 0)
+            return ERROR; // 名称重复
+    Lists.length++;
+    strcpy(Lists.elem[Lists.length - 1].name, ListName); // 赋名
+    LinkList l;
+    l = NULL;
+    InitList(l); // 初始化链表
+    Lists.elem[Lists.length - 1].Li = l;
+    return OK;
+}
+status RemoveList(LISTS &Lists, char ListName[]) {
+    int k = 0;
+    int isfound = 0;
+    for (int i = 0; i < Lists.length; i++) {
+        if (strcmp(Lists.elem[i].name, ListName) == 0) {
+            DestroyList(Lists.elem[i].Li); // 释放链表
+            k = i;
+            isfound = 1;
+        }
+    }
+    if (isfound) {
+        for (int j = k; j < Lists.length - 1; j++)
+            Lists.elem[j] = Lists.elem[j + 1]; // 前移
+        Lists.length--;
+        return OK;
+    }
+    return ERROR;
+}
+int LocateList(LISTS Lists, char ListName[]) {
+    for (int i = 0; i < Lists.length; i++) {
+        if (strcmp(Lists.elem[i].name, ListName) == 0)
+            return i + 1; // 返回下标+1
+    }
+    return ERROR;
+}
+status SwitchList(LISTS Lists, char ListName[], LinkList &L) {
+    for (int i = 0; i < Lists.length; i++) {
+        if (strcmp(ListName, Lists.elem[i].name) == 0) {
+            L = Lists.elem[i].Li; // 切换当前链表
+            return OK;
+        }
+    }
+    return ERROR;
+}
+void ShowAllLists(LISTS lists) {
+    for (int i = 0; i < lists.length; i++) {
+        printf("%s ", lists.elem[i].name); // 输出名字
+        ListTraverse(lists.elem[i].Li);    // 输出内容
+        printf("\n");
+    }
+}
+#include "def2.h"
+#include "system2Func.h"
+int main() {
+    LinkList L;                      // 当前操作的链表指针
+    L = NULL;                        // 初始化为空
+    LISTS lists;                     // 链表集合
+    lists.length = 0;                // 集合长度初始化
+    lists.listsize = LIST_INIT_SIZE; // 集合容量初始化
+    int op = 1;                      // 操作选项
+    printf(" Menu for Linear List on Linked Structure\n"
+           "-------------------------------------------------\n"
+           "1. InitList       12.ListTraverse\n"
+           "2. DestroyList    13.ReverseList\n"
+           "3. ClearList      14.RemoveNthFromEnd\n"
+           "4. ListEmpty      15.SortList\n"
+           "5. ListLength     16.SaveList\n"
+           "6. GetElem        17.LoadList\n"
+           "7. LocateElem     18.AddList\n"
+           "8. PriorElem      19.RemoveList\n"
+           "9. NextElem       20.LocateList\n"
+           "10.ListInsert     21.SwitchList\n"
+           "11.ListDelete     22.ShowAllLists\n"
+           "0. Exit\n"
+           "-------------------------------------------------\n");
+    while (op) {
+        printf("\n Choose you operation : ");
+        scanf("%d", &op); // 读取操作选项
+        switch (op) {
+        case 1:
+            if (InitList(L) == OK)
+                printf("Linear list was successfully created \n"); // 初始化链表
+            else
+                printf("Linear list creation failed \n");
+            getchar();
+            break;
+        case 2:
+            if (DestroyList(L) == OK)
+                printf("Linear list was successfully destroyed \n"); // 销毁链表
+            else
+                printf("Linear list destruction failed \n");
+            getchar();
+            break;
+        case 3:
+            if (ClearList(L) == OK)
+                printf("Linear list was successfully cleared \n"); // 清空链表
+            else
+                printf("Linear list clear failed \n");
+            getchar();
+            break;
+        case 4:
+            if (ListEmpty(L) == TRUE)
+                printf("The linear list is empty \n"); // 判断链表是否为空
+            else
+                printf("The linear list is not empty \n");
+            getchar();
+            break;
+        case 5:
+            if (ListLength(L) != INFEASIBLE)
+                printf("The length of this linear list is %d \n", ListLength(L)); // 输出链表长度
+            getchar();
+            break;
+        case 6: {
+            printf("Please choose the position of your number (1 to length) : ");
+            int pos;
+            ElemType res;
+            scanf("%d", &pos);
+            if (GetElem(L, pos, res) == OK)
+                printf("The number is %d \n", res); // 获取指定位置元素
+            else
+                printf("The position is illegal \n");
+            getchar();
+            break;
+        }
+        case 7: {
+            printf("Please enter the number you want to locate in comparison : ");
+            ElemType loc;
+            scanf("%d", &loc);
+            getchar();
+            printf("Choose one comparison mode ( > = < ) :");
+            char mode;
+            scanf("%c", &mode);
+            if (LocateElem(L, loc, mode))
+                printf("The first number %c %d is located on the position of %d \n", mode, loc,
+                       LocateElem(L, loc, mode)); // 查找第一个满足条件的位置
+            else
+                printf("The number does not exist \n");
+            getchar();
+            break;
+        }
+        case 8: {
+            printf("Please enter your number : ");
+            ElemType num, pre;
+            scanf("%d", &num);
+            if (PriorElem(L, num, pre) == OK)
+                printf("The prior number is %d \n", pre); // 查找前驱
+            else
+                printf("This number does not have a prior number in the list \n");
+            getchar();
+            break;
+        }
+        case 9: {
+            printf("Please enter your number : ");
+            ElemType numD, next;
+            scanf("%d", &numD);
+            if (NextElem(L, numD, next) == OK)
+                printf("The next number is %d \n", next); // 查找后继
+            else
+                printf("This number does not have a next number in the list \n");
+            getchar();
+            break;
+        }
+        case 10: {
+            printf("Please choose your position and number to insert : ");
+            int pos1;
+            ElemType num1;
+            scanf("%d%d", &pos1, &num1);
+            if (ListInsert(L, pos1, num1) == OK)
+                printf("The number is successfully inserted \n"); // 插入元素
+            else
+                printf("ListInsert failed \n");
+            getchar();
+            break;
+        }
+        case 11:
+            printf("Please choose the position to delete : ");
+            int pos2;
+            ElemType num2;
+            scanf("%d", &pos2);
+            if (ListDelete(L, pos2, num2) == OK)
+                printf("The number is successfully deleted \n"); // 删除元素
+            else
+                printf("Deletion failed \n");
+            getchar();
+            break;
+        case 12:
+            if (!ListTraverse(L))
+                printf("The list is empty \n"); // 遍历链表
+            getchar();
+            break;
+        case 13:
+            if (ReverseList(L) == OK)
+                printf("The list is reversed \n"); // 反转链表
+            else
+                printf("ERROR \n");
+            getchar();
+            break;
+        case 14: {
+            int n;
+            printf("Enter the rank from the end : ");
+            scanf("%d", &n);
+            status resFromEnd = RemoveNthFromEnd(L, n);
+            if (resFromEnd == OK)
+                printf("Successfully removed \n"); // 删除倒数第n个
+            else if (resFromEnd == INFEASIBLE)
+                printf("The list doesn't exist \n");
+            else
+                printf("The rank is illegal \n");
+            getchar();
+            break;
+        }
+        case 15:
+            if (L == NULL)
+                printf("No elem to sort\n");
+            else if (L->next == NULL)
+                printf("Can't sort empty list \n");
+            else {
+                sortList(L);
+                printf("List sorted \n"); // 排序链表
+            }
+            getchar();
+            break;
+        case 16: {
+            char filename[] = "c:\\Users\\12841\\Desktop\\none\\2025springDS\\experiments\\ex2\\list2.txt";
+            if (SaveList(L, filename) == OK)
+                printf("Saved successfully \n"); // 保存链表到文件
+            else
+                printf("Saving failed\n");
+            getchar();
+            break;
+        }
+        case 17: {
+            char filename[] = "c:\\Users\\12841\\Desktop\\none\\2025springDS\\experiments\\ex2\\list2.txt";
+            LinkList l = NULL;
+            if (l != NULL)
+                printf("List is not empty \n");
+            if (LoadList(l, filename) == OK)
+                printf("Load successfully \n"); // 从文件加载链表
+            else
+                printf("Loading failed \n");
+            printf("Do you want to check the list (Y/N) : ");
+            char opt;
+            getchar();
+            scanf("%c", &opt);
+            if (opt == 'Y' || opt == 'y')
+                ListTraverse(l); // 加载后遍历
+            else
+                break;
+            getchar();
+            break;
+        }
+        case 18: {
+            printf("Please enter your listname : ");
+            char name[100];
+            scanf("%s", name);
+            if (AddList(lists, name) == OK) {
+                printf("List added \n");             // 添加新链表到集合
+                L = lists.elem[lists.length - 1].Li; // 切换到新链表
+            } else
+                printf("Failed \n");
+            getchar();
+            break;
+        }
+        case 19:
+            printf("Enter the listname to remove : ");
+            char name2[100];
+            scanf("%s", name2);
+            if (RemoveList(lists, name2) == OK)
+                printf("List removed \n"); // 移除链表
+            else
+                printf("Can't remove the list \n");
+            getchar();
+            break;
+        case 20: {
+            printf("Enter the name to locate : ");
+            char name3[100];
+            scanf("%s", name3);
+            if (LocateList(lists, name3))
+                printf("The position is : %d \n", LocateList(lists, name3)); // 查找链表在集合中的位置
+            else
+                printf("The list does not exist !\n");
+            getchar();
+            break;
+        }
+        case 21: {
+            printf("Enter the name to switch : ");
+            char name3[100];
+            scanf("%s", name3);
+            if (SwitchList(lists, name3, L) == OK)
+                printf("Switched successfully \n"); // 切换当前链表
+            else
+                printf("The list does not exist \n");
+            getchar();
+            break;
+        }
+        case 22:
+            ShowAllLists(lists); // 显示所有链表及内容
+            getchar();
+            break;
+        case 0:
+            break;
+        } // end of switch
+    } // end of while
+    printf("Welcome to the system next time \n"); // 退出提示
+    return 0;
+}
 \end{lstlisting}
 
 \newpage
 \section{附录C 基于二叉链表二叉树实现的源程序}
 
 \begin{lstlisting}[language=c]
+#include "stdio.h"
+#include "stdlib.h"
+#include <malloc.h>
+#include <string.h>
+#define TRUE 1
+#define FALSE 0
+#define OK 1
+#define ERROR 0
+#define INFEASIBLE -1
+#define OVERFLOW -2
+#define MAXTREENUM 10
+typedef int status;
+typedef int KeyType;
+typedef struct {
+    KeyType key;
+    char others[20];
+} TElemType; // 二叉树结点类型定义
+typedef struct BiTNode { // 二叉链表结点的定义
+    TElemType data;
+    struct BiTNode *lchild, *rchild;
+} BiTNode, *BiTree;
+typedef struct {
+    struct {
+        char name[20];
+        BiTree T;
+    } elem[10];
+    int amount;
+} Trees;
+typedef struct {
+    int pos;
+    TElemType data;
+} DEF;
+status CreateBiTree(BiTree &T, DEF definition[]) {
+    int i = 0, j;
+    static BiTNode *p[100];
+    while (j = definition[i].pos) {
+        p[j] = (BiTNode *)malloc(sizeof(BiTNode));
+        p[j]->data = definition[i].data;
+        p[j]->lchild = NULL;
+        p[j]->rchild = NULL;
+        if (j != 1) {
+            if (j % 2)
+                p[j / 2]->rchild = p[j];
+            else
+                p[j / 2]->lchild = p[j];
+        }
+        i++;
+    }
+    T = p[1];
+    return OK;
+}
+status DestroyBiTree(BiTree &T) {
+    if (!T)
+        return ERROR;
+    if (T->lchild)
+        DestroyBiTree(T->lchild);
+    if (T->rchild)
+        DestroyBiTree(T->rchild);
+    free(T);
+    T = NULL;
+    return OK;
+}
+status ClearBiTree(BiTree &T) {
+    if (!T)
+        return ERROR;
+    if (T->lchild)
+        ClearBiTree(T->lchild);
+    if (T->rchild)
+        ClearBiTree(T->rchild);
+    T->data.key = 0;
+    strcpy(T->data.others, "NULL");
+    return OK;
+}
+status BiTreeEmpty(BiTree T) {
+    if (!T)
+        return TRUE;
+    else
+        return FALSE;
+}
+int BiTreeDepth(BiTree T) {
+    if (!T)
+        return 0;
+    int left = BiTreeDepth(T->lchild);
+    int right = BiTreeDepth(T->rchild);
+    return (left > right) ? (left + 1) : (right + 1);
+}
+BiTNode *LocateNode(BiTree T, KeyType e) {
+    if (!T)
+        return NULL;
+    if (T->data.key == e)
+        return T;
+    BiTNode *left = LocateNode(T->lchild, e);
+    if (left)
+        return left;
+    return LocateNode(T->rchild, e);
+}
+status Assign(BiTree &T, KeyType e, TElemType value) {
+    BiTNode *target = LocateNode(T, e);
+    BiTNode *err = LocateNode(T, value.key);
+    if (!target)
+        return ERROR;
+    if (err != target && err != NULL)
+        return INFEASIBLE;
+    target->data = value;
+    return OK;
+}
+BiTNode *GetSibling(BiTree T, KeyType e) {
+    if (!T || !T->lchild || !T->rchild)
+        return NULL;
+    if (T->lchild && T->lchild->data.key == e)
+        return T->rchild;
+    if (T->rchild && T->rchild->data.key == e)
+        return T->lchild;
+    BiTNode *tmp = GetSibling(T->lchild, e);
+    if (tmp)
+        return tmp;
+    return GetSibling(T->rchild, e);
+}
+status InsertNode(BiTree &T, KeyType e, int LR, TElemType c) {
+    if (LocateNode(T, c.key))
+        return ERROR;
+    if (!LocateNode(T, e))
+        return ERROR;
+    BiTNode *ins = (BiTNode *)malloc(sizeof(BiTNode));
+    ins->data = c;
+    ins->lchild = NULL;
+    ins->rchild = NULL;
 
+    BiTNode *tmp = LocateNode(T, e);
+    if (LR == -1) {
+        ins->rchild = T;
+        ins->lchild = NULL;
+        T = ins;
+    }
+    if (LR == 0) {
+        ins->rchild = tmp->lchild;
+        tmp->lchild = ins;
+    }
+    if (LR == 1) {
+        ins->rchild = tmp->rchild;
+        tmp->rchild = ins;
+    }
+    return OK;
+}
+status DeleteNode(BiTree &T, KeyType e) {
+    if (!T)
+        return ERROR;
+    if (T->data.key == e) {
+        BiTree tmp = T;
+        if (!T->lchild && !T->rchild) {
+            free(T);
+            T = NULL;
+        } else if (!T->lchild && T->rchild) {
+            T = T->rchild;
+            free(tmp);
+        } else if (!T->rchild && T->lchild) {
+            T = T->lchild;
+            free(tmp);
+        } else {
+            BiTree l = T->lchild;
+            BiTree r = T->rchild;
+            BiTree mr = T->lchild;
+            while (mr->rchild)
+                mr = mr->rchild;
+            mr->rchild = r;
+            T = l;
+            free(tmp);
+        }
+        return OK;
+    }
+    if (DeleteNode(T->lchild, e) == OK)
+        return OK;
+    if (DeleteNode(T->rchild, e) == OK)
+        return OK;
+}
+void visit(BiTree T) {
+    printf("%d,%s ", T->data.key, T->data.others);
+}
+status PreOrderTraverse(BiTree &T, void (*visit)(BiTree)) {
+    if (!T)
+        return ERROR;
+    BiTree stack[100];
+    int top = 0;
+    BiTree p = T;
+    while (p || top > 0) {
+        if (p) {
+            visit(p);
+            stack[top++] = p;
+            p = p->lchild;
+        } else {
+            p = stack[--top];
+            p = p->rchild;
+        }
+    }
+    return OK;
+}
+status InOrderTraverse(BiTree &T, void (*visit)(BiTree)) {
+    if (!T)
+        return ERROR;
+    InOrderTraverse(T->lchild, visit);
+    visit(T);
+    InOrderTraverse(T->rchild, visit);
+    return OK;
+}
+status PostOrderTraverse(BiTree &T, void (*visit)(BiTree)) {
+    if (!T)
+        return ERROR;
+    PostOrderTraverse(T->lchild, visit);
+    PostOrderTraverse(T->rchild, visit);
+    visit(T);
+    return OK;
+}
+status LevelOrderTraverse(BiTree &T, void (*visit)(BiTree)) {
+    if (!T)
+        return ERROR;
+    BiTree queue[100];
+    int front = 0, rear = 0;
+    queue[rear++] = T;
+    while (front < rear) {
+        BiTree cur = queue[front++];
+        visit(cur);
+        if (cur->lchild)
+            queue[rear++] = cur->lchild;
+        if (cur->rchild)
+            queue[rear++] = cur->rchild;
+    }
+    return OK;
+}
+int MaxPathSum(BiTree T) {
+    if (!T)
+        return 0;
+    if (!T->lchild && !T->rchild)
+        return T->data.key;
+    int leftSum = MaxPathSum(T->lchild);
+    int rightSum = MaxPathSum(T->rchild);
+    return T->data.key + ((leftSum > rightSum) ? leftSum : rightSum);
+}
+BiTNode *LowestCommonAncestor(BiTree T, BiTNode *e1, BiTNode *e2) {
+    if (!T)
+        return T;
+    if (T->data.key == e1->data.key || T->data.key == e2->data.key)
+        return T;
+    BiTNode *left = LowestCommonAncestor(T->lchild, e1, e2);
+    BiTNode *right = LowestCommonAncestor(T->rchild, e1, e2);
+    if (left && right)
+        return T;
+    return left ? left : right;
+}
+status InvertTree(BiTree &T) {
+    if (!T)
+        return ERROR;
+    BiTree tmp = T->lchild;
+    T->lchild = T->rchild;
+    T->rchild = tmp;
+    InvertTree(T->lchild);
+    InvertTree(T->rchild);
+    return OK;
+}
+status SaveBiTreeHelper(BiTree &T, FILE *fp) {
+    if (!fp)
+        return ERROR;
+    if (T) {
+        fprintf(fp, "%d %s\n", T->data.key, T->data.others);
+        SaveBiTreeHelper(T->lchild, fp);
+        SaveBiTreeHelper(T->rchild, fp);
+    } else
+        fprintf(fp, "0 NULL\n");
+    return OK;
+}
+status LoadBiTreeHelper(BiTree &T, FILE *fp) {
+    if (!fp)
+        return ERROR;
+    int key;
+    char others[20];
+    if (fscanf(fp, "%d %s", &key, others) != 2) {
+        fclose(fp);
+        fp = NULL;
+        return ERROR;
+    }
+    if (key == 0 && strcmp(others, "NULL") == 0) {
+        T = NULL;
+        return OK;
+    }
+    T = (BiTree)malloc(sizeof(BiTNode));
+    if (!T)
+        return OVERFLOW;
+    T->data.key = key;
+    strcpy(T->data.others, others);
+    LoadBiTreeHelper(T->lchild, fp);
+    LoadBiTreeHelper(T->rchild, fp);
+    return OK;
+}
+status SaveBiTree(BiTree &T, char FileName[]) {
+    FILE *fp = fopen(FileName, "r");
+    if (fp) {
+        fclose(fp);
+        fp = fopen(FileName, "w");
+    } else {
+        fp = fopen(FileName, "w");
+    }
+    if (!fp)
+        return ERROR;
+    SaveBiTreeHelper(T, fp);
+    fclose(fp);
+    return OK;
+}
+status LoadBiTree(BiTree &T, char FileName[]) {
+    static FILE *fp = NULL;
+    if (!fp) {
+        fp = fopen(FileName, "r");
+        if (!fp)
+            return ERROR;
+    }
+    LoadBiTreeHelper(T, fp);
+    return OK;
+}
+status AddTree(Trees &trees, char TreeName[]) {
+    if (trees.amount > MAXTREENUM)
+        return ERROR; // 超过最大树数量
+    for (int i = 0; i < trees.amount; i++)
+        if (strcmp(trees.elem[i].name, TreeName) == 0) {
+            printf("The name has already exists \n ");
+            return ERROR; // 名称已存在
+        }
+    strcpy(trees.elem[trees.amount].name, TreeName); // 复制树名
+    trees.elem[trees.amount].T = NULL;               // 初始化树指针
+    trees.amount++;
+    return OK;
+}
+status RemoveTree(Trees &trees, char TreeName[]) {
+    for (int i = 0; i < trees.amount; i++) {
+        if (strcmp(trees.elem[i].name, TreeName) == 0) {
+            DestroyBiTree(trees.elem[i].T); // 释放树内存
+            for (int j = i; j < trees.amount - 1; j++)
+                trees.elem[j] = trees.elem[j + 1]; // 后续前移
+            trees.amount--;
+            return OK;
+        }
+    }
+    return ERROR;
+}
+int LocateTree(Trees trees, char TreeName[]) {
+    for (int i = 0; i < trees.amount; i++) {
+        if (strcmp(trees.elem[i].name, TreeName) == 0)
+            return i + 1; // 返回下标+1
+    }
+    return ERROR;
+}
+status SwitchTrees(Trees trees, char TreeName[], BiTree &T) {
+    for (int i = 0; i < trees.amount; i++) {
+        if (strcmp(trees.elem[i].name, TreeName) == 0) {
+            T = trees.elem[i].T; // 切换当前树
+            return OK;
+        }
+    }
+    return ERROR;
+}
+void ShowAllTrees(Trees trees) {
+    for (int i = 0; i < trees.amount; i++) {
+        printf("%s", trees.elem[i].name); // 输出树名
+        printf("\nPreOrder : ");
+        PreOrderTraverse(trees.elem[i].T, visit); // 先序遍历
+        printf("\nInOrder : ");
+        InOrderTraverse(trees.elem[i].T, visit); // 中序遍历
+        printf("\n");
+    }
+}
+#include "def3.h"
+#include "system3Func.h"
+int main() {
+    BiTree T = NULL;
+    Trees trees;
+    trees.amount = 0;
+    char filename[] = "c:\\Users\\12841\\Desktop\\none\\2025springDS\\experiments\\ex3\\bitree.txt";
+    int op = 1;
+    printf(" Menu for BiTree Structure\n"
+           "-------------------------------------------------\n"
+           "1. CreateBiTree       13.PostOrderTraverse\n"
+           "2. DestroyBiTree      14.LevelOrderTraverse\n"
+           "3. ClearBiTree        15.MaxPathSum\n"
+           "4. BiTreeEmpty        16.LowestCommonAncestor \n"
+           "5. BiTreeDepth        17.InvertTree\n"
+           "6. LocateNode         18.SaveBiTree \n"
+           "7. Assign             19.LoadBiTree\n"
+           "8. GetSibling         20.AddTree\n"
+           "9. InsertNode         21.RemoveTree\n"
+           "10.DeleteNode         22.LocateTree\n"
+           "11.PreOrderTraverse   23.SwitchTrees\n"
+           "12.InOrderTraverse    24.ShowAllTrees\n"
+           "0. Exit"
+           "-------------------------------------------------\n");
+    while (op) {
+        printf("\n Choose your operation : ");
+        scanf("%d", &op);
+        switch (op) {
+        case 0:
+            break;
+        case 1: {
+            DEF difinition[100];
+            int count = 0;
+            printf("Enter the difinition BiTree : ");
+            do {
+                scanf("%d%d%s", &difinition[count].pos, &difinition[count].data.key, difinition[count].data.others);
+            } while (difinition[count++].pos); // 输入树的定义，直到pos为0
+            if (CreateBiTree(T, difinition) == OK)
+                printf("BiTree create successfully \n"); // 创建二叉树
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 2:
+            if (T == NULL) {
+                printf("The BiTree does not exist \n"); // 树不存在
+                break;
+            }
+            if (DestroyBiTree(T) == OK)
+                printf("Destroy successfully \n"); // 销毁树
+            else
+                printf("Failed \n");
+            break;
+        case 3:
+            if (T == NULL) {
+                printf("The BiTree does not exist \n"); // 树不存在
+                break;
+            }
+            if (ClearBiTree(T) == OK)
+                printf("Clear successfully \n"); // 清空树内容
+            else
+                printf("Failed \n");
+            break;
+        case 4:
+            if (BiTreeEmpty(T) == TRUE)
+                printf("The BiTree is empty \n"); // 判断树是否为空
+            else
+                printf("The BiTree is not empty \n");
+            break;
+        case 5: {
+            int depth = BiTreeDepth(T);
+            printf("The depth of this BiTree is %d \n", depth); // 输出树深度
+            break;
+        }
+        case 6: {
+            BiTNode *tmp;
+            KeyType e;
+            printf("Enter the key node : ");
+            scanf("%d", &e);
+            getchar();
+            tmp = LocateNode(T, e);
+            if (tmp != NULL)
+                printf("The node is %d %s \n", tmp->data.key, tmp->data.others); // 查找节点
+            else
+                printf("Couldn't find the node with key %d \n", e);
+            break;
+        }
+        case 7: {
+            KeyType e;
+            TElemType value;
+            printf("Enter the key and the message of value(key and others) :");
+            scanf("%d%d%s", &e, &value.key, value.others);
+            getchar();
+            status as = Assign(T, e, value);
+            if (as == OK)
+                printf("Assign successfully \n"); // 赋值节点
+            else if (as == INFEASIBLE)
+                printf("The value's key has already exists \n");
+            else
+                printf("Assign failed \n");
+            break;
+        }
+        case 8: {
+            KeyType e;
+            printf("Enter the key to find sibling : ");
+            scanf("%d", &e);
+            getchar();
+            BiTNode *p = GetSibling(T, e);
+            if (p)
+                printf("The sibling is %d %s \n", p->data.key, p->data.others); // 查找兄弟节点
+            else
+                printf("The target node doesn't have sibling \n");
+            break;
+        }
+        case 9: {
+            KeyType e;
+            int mode;
+            TElemType c;
+            printf("Enter the target node's key : ");
+            scanf("%d", &e);
+            getchar();
+            printf("Enter the mdoe(-1/0/1) : ");
+            scanf("%d", &mode);
+            getchar();
+            printf("Enter the key and others to insert : ");
+            scanf("%d%s", &c.key, c.others);
+            getchar();
+            if (InsertNode(T, e, mode, c) == OK)
+                printf("Insert successfully \n"); // 插入节点
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 10: {
+            KeyType e;
+            printf("Enter the key node to delete : ");
+            scanf("%d", &e);
+            getchar();
+            if (DeleteNode(T, e) == OK)
+                printf("Delete successfully \n"); // 删除节点
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 11:
+            if (!PreOrderTraverse(T, visit))
+                printf("Error \n"); // 先序遍历
+            else
+                printf("\n");
+            break;
+        case 12:
+            if (!InOrderTraverse(T, visit))
+                printf("Error \n"); // 中序遍历
+            else
+                printf("\n");
+            break;
+        case 13:
+            if (!PostOrderTraverse(T, visit))
+                printf("Error \n"); // 后序遍历
+            else
+                printf("\n");
+            break;
+        case 14:
+            if (!LevelOrderTraverse(T, visit))
+                printf("Error \n"); // 层序遍历
+            else
+                printf("\n");
+            break;
+        case 15:
+            if (!T) {
+                printf("The BiTree doesn't exist \n"); // 树不存在
+                break;
+            }
+            printf("The max path sum is %d \n", MaxPathSum(T)); // 最大路径和
+            break;
+        case 16: {
+            if (!T) {
+                printf("The BiTree doesn't exist \n"); // 树不存在
+                break;
+            }
+            int key1, key2;
+            printf("Enter the key of e1 and e2 : ");
+            scanf("%d%d", &key1, &key2);
+            getchar();
+            BiTNode *e1 = LocateNode(T, key1);
+            BiTNode *e2 = LocateNode(T, key2);
+            if (!e1 || !e2) {
+                printf("One or two node is not found \n"); // 节点不存在
+                break;
+            }
+            BiTNode *p = LowestCommonAncestor(T, e1, e2);
+            if (p)
+                printf("The lowest common ancestor is %d %s \n", p->data.key, p->data.others); // 最近公共祖先
+            else
+                printf("No common ancestor found \n");
+            break;
+        }
+        case 17:
+            if (InvertTree(T) == OK)
+                printf("Invert successfully \n"); // 翻转树
+            else
+                printf("Failed \n");
+            break;
+        case 18:
+            if (SaveBiTree(T, filename) == OK)
+                printf("Save successfully \n"); // 保存树到文件
+            else
+                printf("Error \n");
+            break;
+        case 19: {
+            char name[20];
+            printf("Input the tree name to load : ");
+            scanf("%s", name);
+            getchar();
+            BiTree t = NULL;
+            if (LoadBiTree(t, filename) == OK)
+                printf("Load successfully \n"); // 加载树
+            else
+                printf("Error \n");
+            printf("Do you want to check the tree(Y/N) : ");
+            char opt;
+            scanf("%c", &opt);
+            getchar();
+            if (opt == 'Y' || opt == 'y') {
+                printf("PreOrder :");
+                PreOrderTraverse(t, visit);
+                printf("\nInOrder :");
+                InOrderTraverse(t, visit);
+            }
+            trees.elem[trees.amount].T = t;
+            strcpy(trees.elem[trees.amount++].name, name);
+            T = t;
+            printf("\n");
+            break;
+        }
+        case 20: {
+            printf("Enter the name to add : ");
+            char name[20];
+            scanf("%s", name);
+            getchar();
+            if (AddTree(trees, name) == OK) {
+                DEF difinition[100];
+                int count = 0;
+                printf("Enter the difinition BiTree : ");
+                do {
+                    scanf("%d%d%s", &difinition[count].pos, &difinition[count].data.key, difinition[count].data.others);
+                } while (difinition[count++].pos); // 输入树定义
+                if (CreateBiTree(trees.elem[trees.amount - 1].T, difinition) == OK) {
+                    printf("Add successfully \n"); // 添加树
+                    T = trees.elem[trees.amount - 1].T;
+                } else
+                    printf("Error \n");
+            }
+            break;
+        }
+        case 21: {
+            printf("Enter the name to remove : ");
+            char name[20];
+            scanf("%s", name);
+            getchar();
+            if (RemoveTree(trees, name) == OK)
+                printf("Remove successfully\n"); // 移除树
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 22: {
+            printf("Enter the name to locate : ");
+            char name3[100];
+            scanf("%s", name3);
+            if (LocateTree(trees, name3))
+                printf("The position is : %d \n", LocateTree(trees, name3)); // 查找树在集合中的位置
+            else
+                printf("The tree does not exist !\n");
+            getchar();
+            break;
+        }
+        case 23: {
+            printf("Enter the name to switch : ");
+            char name[20];
+            scanf("%s", name);
+            getchar();
+            if (SwitchTrees(trees, name, T) == OK)
+                printf("Switch successfully \n"); // 切换当前树
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 24:
+            ShowAllTrees(trees); // 显示所有树及遍历
+            break;
+        default:
+            break;
+        }
+    }
+    printf("Welcome to the system next time \n"); // 退出提示
+}
 \end{lstlisting}
 
 \newpage
-\section{附录D 基于邻接表图实现的源程序}
-\begin{lstlisting}[language=c]
 
+\section{附录D 基于邻接表图实现的源程序}
+
+\begin{lstlisting}[language=c]
+#include "stdio.h"
+#include "stdlib.h"
+#include <string.h>
+#include <malloc.h>
+#define TRUE 1
+#define FALSE 0
+#define OK 1
+#define ERROR 0
+#define INFEASIBLE -1
+#define OVERFLOW -2
+#define MAX_VERTEX_NUM 20
+typedef int status;
+typedef int KeyType;
+typedef enum { 
+	DG,DN,UDG,UDN
+} GraphKind;
+typedef struct {
+    KeyType key;
+    char others[20];
+} VertexType; // 顶点类型定义
+typedef struct ArcNode {     // 表结点类型定义
+    int adjvex;              // 顶点位置编号
+    struct ArcNode *nextarc; // 下一个表结点指针
+} ArcNode;
+typedef struct VNode { // 头结点及其数组类型定义
+    VertexType data;   // 顶点信息
+    ArcNode *firstarc; // 指向第一条弧
+} VNode, AdjList[MAX_VERTEX_NUM];
+typedef struct {        // 邻接表的类型定义
+    AdjList vertices;   // 头结点数组
+    int vexnum, arcnum; // 顶点数、弧数
+    GraphKind kind;     // 图的类型
+} ALGraph;
+typedef struct {
+    int amount;
+    struct {
+        char name[20];
+        ALGraph G;
+    } elem[20];
+} Graphs;
+status CreateGraph(ALGraph &G, VertexType V[], KeyType VR[][2]) {
+    int i = 0;
+    while (V[i].key != -1)
+        i++;
+    G.vexnum = i;
+    if (G.vexnum == 0 || G.vexnum > MAX_VERTEX_NUM)
+        return ERROR;
+    for (int i = 0; i < G.vexnum; i++)
+        for (int j = i + 1; j < G.vexnum; j++)
+            if (V[i].key == V[j].key)
+                return ERROR;
+    for (int i = 0; i < G.vexnum; i++) {
+        G.vertices[i].data = V[i];
+        G.vertices[i].firstarc = NULL;
+    }
+    i = 0;
+    while (VR[i][0] != -1) {
+        int v1 = -1, v2 = -1;
+        for (int j = 0; j < G.vexnum; j++) {
+            if (G.vertices[j].data.key == VR[i][0])
+                v1 = j;
+            if (G.vertices[j].data.key == VR[i][1])
+                v2 = j;
+        }
+        if (v1 == -1 || v2 == -1)
+            return ERROR;
+        ArcNode *arc12 = (ArcNode *)malloc(sizeof(ArcNode));
+        if (!arc12)
+            return ERROR;
+        arc12->adjvex = v2;
+        arc12->nextarc = G.vertices[v1].firstarc;
+        G.vertices[v1].firstarc = arc12;
+        ArcNode *arc21 = (ArcNode *)malloc(sizeof(ArcNode));
+        arc21->adjvex = v1;
+        arc21->nextarc = G.vertices[v2].firstarc;
+        G.vertices[v2].firstarc = arc21;
+        i++;
+    }
+    G.arcnum = i;
+    return OK;
+}
+status DestroyGraph(ALGraph &G) {
+    if (G.vexnum <= 0)
+        return ERROR;
+    for (int i = 0; i < G.vexnum; i++) {
+        ArcNode *p = G.vertices[i].firstarc;
+        while (p) {
+            ArcNode *tmp = p;
+            p = p->nextarc;
+            free(tmp);
+            G.vertices[i].firstarc = p;
+        }
+        G.vertices[i].firstarc = NULL;
+    }
+    G.arcnum = 0;
+    G.vexnum = 0;
+    return OK;
+}
+int LocateVex(ALGraph G, KeyType u) {
+    for (int i = 0; i < G.vexnum; i++) {
+        if (G.vertices[i].data.key == u)
+            return i;
+    }
+    return -1;
+}
+status PutVex(ALGraph &G, KeyType u, VertexType value) {
+    if (G.vexnum <= 0)
+        return ERROR;
+    int find = 0;
+    for (int i = 0; i < G.vexnum; i++) {
+        if (G.vertices[i].data.key == value.key)
+            return ERROR;
+    }
+    for (int i = 0; i < G.vexnum; i++) {
+        if (G.vertices[i].data.key == u) {
+            G.vertices[i].data.key = value.key;
+            strcpy(G.vertices[i].data.others, value.others);
+            find = 1;
+        }
+    }
+    if (!find)
+        return ERROR;
+    return OK;
+}
+int FirstAdjVex(ALGraph &G, KeyType u) {
+    for (int i = 0; i < G.vexnum; i++) {
+        if (G.vertices[i].data.key == u) {
+            if (G.vertices[i].firstarc == NULL)
+                return -1;
+            return G.vertices[i].firstarc->adjvex;
+        }
+    }
+    return -1;
+}
+int NextAdjVex(ALGraph &G, KeyType v, KeyType w) {
+    int vpos = -1, wpos = -1;
+    for (int i = 0; i < G.vexnum; i++) {
+        if (G.vertices[i].data.key == v)
+            vpos = i;
+        if (G.vertices[i].data.key == w)
+            wpos = i;
+    }
+    if (vpos == -1 || wpos == -1)
+        return -1;
+    ArcNode *p = G.vertices[vpos].firstarc;
+    while (p != NULL) {
+        if (p->adjvex == wpos) {
+            if (!p->nextarc)
+                return -1;
+            return p->nextarc->adjvex;
+        }
+        p = p->nextarc;
+    }
+    return -1;
+}
+status InsertVex(ALGraph &G, VertexType v) {
+    if (G.vexnum >= MAX_VERTEX_NUM)
+        return ERROR;
+    for (int i = 0; i < G.vexnum; i++)
+        if (G.vertices[i].data.key == v.key)
+            return ERROR;
+    G.vertices[G.vexnum].data = v;
+    G.vertices[G.vexnum].firstarc = NULL;
+    G.vexnum += 1;
+    return OK;
+}
+status DeleteVex(ALGraph &G, KeyType v) {
+    int find = 0, pos = -1;
+    int del = 0;
+    ArcNode *p = NULL;
+    for (int i = 0; i < G.vexnum; i++)
+        if (G.vertices[i].data.key == v) {
+            find = 1;
+            pos = i;
+            break;
+        }
+    if (!find)
+        return ERROR;
+    if (G.vexnum == 1)
+        return ERROR;
+    p = G.vertices[pos].firstarc;
+    while (p) {
+        ArcNode *tmp = p;
+        p = p->nextarc;
+        free(tmp);
+        del++;
+    }
+    for (int i = 0; i < G.vexnum; i++) {
+        if (i == pos)
+            continue;
+        p = G.vertices[i].firstarc;
+        if (p && p->adjvex == pos) {
+            G.vertices[i].firstarc = p->nextarc;
+            free(p);
+            del++;
+            p = G.vertices[i].firstarc;
+        }
+        while (p && p->nextarc) {
+            if (p->nextarc->adjvex == pos) {
+                ArcNode *tmp = p->nextarc;
+                p->nextarc = p->nextarc->nextarc;
+                free(tmp);
+                del++;
+            } else
+                p = p->nextarc;
+        }
+    }
+    for (int i = pos; i < G.vexnum - 1; i++) {
+        G.vertices[i].data = G.vertices[i + 1].data;
+        G.vertices[i].firstarc = G.vertices[i + 1].firstarc;
+    }
+    G.vexnum--;
+    for (int i = 0; i < G.vexnum; i++) {
+        p = G.vertices[i].firstarc;
+        while (p) {
+            if (p->adjvex > pos)
+                p->adjvex--;
+            p = p->nextarc;
+        }
+    }
+    G.arcnum -= del / 2;
+    return OK;
+}
+status InsertArc(ALGraph &G, KeyType v, KeyType w) {
+    int vpos = -1, wpos = -1;
+    for (int i = 0; i < G.vexnum; i++) {
+        if (G.vertices[i].data.key == v)
+            vpos = i;
+        if (G.vertices[i].data.key == w)
+            wpos = i;
+    }
+    if (vpos == -1 || wpos == -1)
+        return ERROR;
+    ArcNode *p = G.vertices[vpos].firstarc;
+    while (p) {
+        if (p->adjvex == wpos)
+            return ERROR;
+        p = p->nextarc;
+    }
+    ArcNode *vw = (ArcNode *)malloc(sizeof(ArcNode));
+    ArcNode *wv = (ArcNode *)malloc(sizeof(ArcNode));
+    vw->nextarc = G.vertices[vpos].firstarc;
+    G.vertices[vpos].firstarc = vw;
+    vw->adjvex = wpos;
+    wv->nextarc = G.vertices[wpos].firstarc;
+    G.vertices[wpos].firstarc = wv;
+    wv->adjvex = vpos;
+    G.arcnum += 1;
+    return OK;
+}
+status DeleteArc(ALGraph &G, KeyType v, KeyType w) {
+    int vpos = -1, wpos = -1;
+    for (int i = 0; i < G.vexnum; i++) {
+        if (G.vertices[i].data.key == v)
+            vpos = i;
+        if (G.vertices[i].data.key == w)
+            wpos = i;
+    }
+    if (vpos == -1 || wpos == -1)
+        return ERROR;
+    ArcNode *p = G.vertices[vpos].firstarc;
+    int find = 0;
+    while (p) {
+        if (p->adjvex == wpos) {
+            find = 1;
+            break;
+        }
+        p = p->nextarc;
+    }
+    if (!find)
+        return ERROR;
+    p = G.vertices[vpos].firstarc;
+    if (p->adjvex == wpos) {
+        G.vertices[vpos].firstarc = p->nextarc;
+        free(p);
+    };
+    p = G.vertices[vpos].firstarc;
+    while (p && p->nextarc) {
+        if (p->nextarc->adjvex == wpos) {
+            ArcNode *tmp = p->nextarc;
+            p->nextarc = p->nextarc->nextarc;
+            free(tmp);
+            break;
+        }
+        p = p->nextarc;
+    }
+    p = G.vertices[wpos].firstarc;
+    while (p && p->nextarc) {
+        if (p->nextarc->adjvex == vpos) {
+            ArcNode *tmp = p->nextarc;
+            p->nextarc = p->nextarc->nextarc;
+            free(tmp);
+            break;
+        }
+        p = p->nextarc;
+    }
+    G.arcnum -= 1;
+    return OK;
+}
+void visit(VertexType v) {
+    printf(" %d %s", v.key, v.others);
+}
+status DFS(ALGraph &G, int v, int visited[], void (*visit)(VertexType)) {
+    visited[v] = 1;
+    visit(G.vertices[v].data);
+    ArcNode *p = G.vertices[v].firstarc;
+    while (p) {
+        if (!visited[p->adjvex])
+            DFS(G, p->adjvex, visited, visit);
+        p = p->nextarc;
+    }
+    return OK;
+}
+status DFSTraverse(ALGraph &G, void (*visit)(VertexType)) {
+    static int visited[MAX_VERTEX_NUM] = {0};
+    for (int i = 0; i < G.vexnum; i++)
+        visited[i] = 0;
+    for (int i = 0; i < G.vexnum; i++) {
+        if (!visited[i])
+            DFS(G, i, visited, visit);
+    }
+    return OK;
+}
+status BFSTraverse(ALGraph &G, void (*visit)(VertexType)) {
+    int visited[MAX_VERTEX_NUM] = {0};
+    int queue[MAX_VERTEX_NUM];
+    int front = 0, rear = 0;
+    for (int i = 0; i < G.vexnum; i++) {
+        if (!visited[i]) {
+            visited[i] = 1;
+            visit(G.vertices[i].data);
+            queue[rear++] = i;
+            while (front < rear) {
+                int v = queue[front++];
+                ArcNode *p = G.vertices[v].firstarc;
+                while (p) {
+                    if (!visited[p->adjvex]) {
+                        visited[p->adjvex] = 1;
+                        visit(G.vertices[p->adjvex].data);
+                        queue[rear++] = p->adjvex;
+                    }
+                    p = p->nextarc;
+                }
+            }
+        }
+    }
+    return OK;
+}
+status VerticesSetLessThanK(ALGraph G, VertexType v, int k) {
+    if (k < 0)
+        return ERROR;
+    int *visited = (int *)malloc(G.vexnum * sizeof(int));
+    int *d = (int *)malloc(G.vexnum * sizeof(int));
+    if (!visited || !d)
+        return ERROR;
+    for (int i = 0; i < G.vexnum; i++) {
+        visited[i] = 0;
+        d[i] = -1;
+    }
+    int pos = LocateVex(G, v.key);
+    if (pos == -1)
+        return ERROR;
+    d[pos] = 0;
+    int queue[MAX_VERTEX_NUM];
+    memset(queue, -1, MAX_VERTEX_NUM * sizeof(int));
+    int front = 0, rear = 0;
+    queue[rear++] = pos;
+    visited[pos] = 1;
+    while (front < rear) {
+        int cur = queue[front++];
+        ArcNode *p = G.vertices[cur].firstarc;
+        while (p) {
+            if (!visited[p->adjvex]) {
+                d[p->adjvex] = d[cur] + 1;
+                visited[p->adjvex] = 1;
+                queue[rear++] = p->adjvex;
+            }
+            p = p->nextarc;
+        }
+    }
+    for (int i = 0; i < G.vexnum; i++) {
+        if (d[i] >= 0 && d[i] < k) {
+            printf("(%d,%s) ", G.vertices[i].data.key, G.vertices[i].data.others);
+        }
+    }
+    printf("\n");
+    return OK;
+}
+int ShortestPathLength(ALGraph G, VertexType v, VertexType w) {
+    int pos_v = LocateVex(G, v.key);
+    int pos_w = LocateVex(G, w.key);
+    if (pos_v == -1 || pos_w == -1)
+        return -1;
+    int *visited = (int *)malloc(G.vexnum * sizeof(int));
+    int *dist = (int *)malloc(G.vexnum * sizeof(int));
+    int *parent = (int *)malloc(G.vexnum * sizeof(int));
+    if (!visited || !dist)
+        return -1;
+    for (int i = 0; i < G.vexnum; i++) {
+        visited[i] = 0;
+        dist[i] = -1;
+        parent[i] = -1;
+    }
+    int *queue = (int *)malloc(G.vexnum * sizeof(int));
+    if (!queue) {
+        free(visited);
+        free(dist);
+        free(parent);
+        return -1;
+    }
+    int front = 0, rear = 0;
+    queue[rear++] = pos_v;
+    visited[pos_v] = 1;
+    dist[pos_v] = 0;
+    while (front < rear) {
+        int curr = queue[front++];
+        if (curr == pos_w) {
+            int path[MAX_VERTEX_NUM];
+            int pathLen = 0;
+            for (int i = curr; i != -1; i = parent[i])
+                path[pathLen++] = i;
+            for (int i = pathLen - 1; i >= 0; i--) {
+                printf("(%d,%s)", G.vertices[path[i]].data.key, G.vertices[path[i]].data.others); // 输出路径节点
+                if (i > 0)
+                    printf("->"); // 路径箭头
+            }
+            printf("\nlength is %d \n", dist[curr]); // 输出路径长度
+            free(visited);
+            free(dist);
+            free(queue);
+            free(parent);
+            return dist[curr];
+        }
+        ArcNode *p = G.vertices[curr].firstarc;
+        while (p) {
+            int next = p->adjvex;
+            if (!visited[next]) {
+                visited[next] = 1;
+                dist[next] = dist[curr] + 1;
+                parent[next] = curr;
+                queue[rear++] = next;
+            }
+            p = p->nextarc;
+        }
+    }
+    free(visited);
+    free(dist);
+    free(queue);
+    free(parent);
+    return -1;
+}
+void DFS_C(ALGraph &G, int v, int visited[]) {
+    visited[v] = 1; // 标记已访问
+    ArcNode *p = G.vertices[v].firstarc;
+    while (p) {
+        if (!visited[p->adjvex])
+            DFS_C(G, p->adjvex, visited); // 递归访问
+        p = p->nextarc;
+    }
+}
+int ConnectedComponentNums(ALGraph &G) {
+    if (G.vexnum <= 0)
+        return 0; // 空图
+    int *visited = (int *)malloc(G.vexnum * sizeof(int));
+    if (!visited)
+        return 0;
+    for (int i = 0; i < G.vexnum; i++)
+        visited[i] = 0;
+    int count = 0;
+    for (int i = 0; i < G.vexnum; i++) {
+        if (!visited[i]) {
+            DFS_C(G, i, visited); // 统计连通分量
+            count++;
+        }
+    }
+    free(visited);
+    return count;
+}
+status SaveGraph(ALGraph G, char FileName[]) {
+    FILE *fp = fopen(FileName, "w");
+    if (!fp)
+        return ERROR;              // 文件打开失败
+    fprintf(fp, "%d\n", G.vexnum); // 写入顶点数
+    for (int i = 0; i < G.vexnum; i++) {
+        fprintf(fp, "%d %s ", G.vertices[i].data.key, G.vertices[i].data.others); // 写入顶点信息
+        ArcNode *p = G.vertices[i].firstarc;
+        while (p) {
+            fprintf(fp, "%d ", p->adjvex); // 写入邻接点
+            p = p->nextarc;
+        }
+        fprintf(fp, "-1\n"); // 邻接表结束
+    }
+    fclose(fp);
+    return OK;
+}
+status LoadGraph(ALGraph &G, char FileName[]) {
+    FILE *fp = fopen(FileName, "r");
+    KeyType m;
+    if (!fp)
+        return ERROR;            // 文件打开失败
+    fscanf(fp, "%d", &G.vexnum); // 读取顶点数
+    for (int i = 0; i < G.vexnum; i++) {
+        fscanf(fp, "%d %s", &G.vertices[i].data.key, G.vertices[i].data.others); // 读取顶点信息
+        G.vertices[i].firstarc = NULL;
+        ArcNode *tail = NULL;
+        while (fscanf(fp, "%d", &m) == 1 && m != -1) {
+            ArcNode *p = (ArcNode *)malloc(sizeof(ArcNode));
+            p->adjvex = m;
+            p->nextarc = NULL;
+            if (G.vertices[i].firstarc == NULL)
+                G.vertices[i].firstarc = p; // 第一个邻接点
+            else
+                tail->nextarc = p; // 追加邻接点
+            tail = p;
+        }
+    }
+    fclose(fp);
+    return OK;
+}
+status AddGraph(Graphs &graphs, char GraphName[]) {
+    for (int i = 0; i < graphs.amount; i++)
+        if (strcmp(graphs.elem[i].name, GraphName) == 0)
+            return ERROR;                               // 名称重复
+    strcpy(graphs.elem[graphs.amount].name, GraphName); // 复制名称
+    graphs.elem[graphs.amount].G.vexnum = 0;
+    graphs.elem[graphs.amount].G.arcnum = 0;
+    graphs.amount++;
+    return OK;
+}
+status RemoveGraph(Graphs &graphs, char GraphName[]) {
+    if (graphs.amount <= 0)
+        return ERROR; // 没有图
+    for (int i = 0; i < graphs.amount; i++) {
+        if (strcmp(graphs.elem[i].name, GraphName) == 0) {
+            DestroyGraph(graphs.elem[i].G); // 释放图内存
+            for (int j = i; j < graphs.amount - 1; j++)
+                graphs.elem[j] = graphs.elem[j + 1]; // 前移
+            graphs.amount--;
+            return OK;
+        }
+    }
+    DestroyGraph(graphs.elem[graphs.amount].G);
+    return ERROR;
+}
+int LocateGraph(Graphs &graphs, char GraphName[]) {
+    for (int i = 0; i < graphs.amount; i++) {
+        if (strcmp(graphs.elem[i].name, GraphName) == 0)
+            return i + 1; // 返回下标+1
+    }
+    return ERROR;
+}
+status SwitchGraph(Graphs &graphs, char GraphName[], ALGraph G) {
+    for (int i = 0; i < graphs.amount; i++) {
+        if (strcmp(graphs.elem[i].name, GraphName) == 0) {
+            G = graphs.elem[i].G; // 切换当前图
+            return OK;
+        }
+    }
+    return ERROR;
+}
+void ShowAllGraphs(Graphs graphs) {
+    for (int i = 0; i < graphs.amount; i++) {
+        printf("%s\n", graphs.elem[i].name); // 输出图名
+        for (int j = 0; j < graphs.elem[i].G.vexnum; j++) {
+            printf("%d %s ", graphs.elem[i].G.vertices[j].data.key,
+                   graphs.elem[i].G.vertices[j].data.others); // 输出顶点
+            ArcNode *p = graphs.elem[i].G.vertices[j].firstarc;
+            while (p) {
+                printf("%d ", p->adjvex); // 输出邻接点
+                p = p->nextarc;
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+}
+#include "def4.h"
+#include "system4Func.h"
+int main() {
+    ALGraph G;                       // 当前操作的图
+    Graphs graphs;                   // 图集合
+    graphs.amount = 0;               // 图集合数量初始化
+    char filename[] = "./graph.txt"; // 默认文件名
+    int op = 1;                      // 操作选项
+    printf(" Menu for Graph Structure\n"
+           "-------------------------------------------------\n"
+           "1.CreateGraph              2.DestroyGraph       \n"
+           "3.LocateVex                4.PutVex             \n"
+           "5.FirstAdjVex              6.NextAdjVex         \n"
+           "7.InsertVex                8.DeleteVex          \n"
+           "9.InsertArc                10.DeleteArc         \n"
+           "11.DFSTraverse             12.BFSTraverse       \n"
+           "13.VerticesSetLessThanK    14.ShortestPathLength\n"
+           "15.ConnectedComponentNums  16.SaveGraph         \n"
+           "17.LoadGraph               18.AddGraph          \n"
+           "19.RemoveGraph             20.LocateGraph       \n"
+           "21.SwitchGraph             22.ShowAllGraphs     \n"
+           "0.Exit\n"
+           "-------------------------------------------------\n");
+    while (op) {
+        printf("\n Please Choose your operation : ");
+        scanf("%d", &op); // 读取操作选项
+        switch (op) {
+        case 0:
+            break;
+        case 1: {
+            VertexType V[100];
+            KeyType VR[100][2];
+            printf("Input the name :");
+            scanf("%s", graphs.elem[graphs.amount].name); // 输入图名
+            G.vexnum = 0, G.arcnum = 0;
+            printf("Input the vexs and keys definition :");
+            while (scanf("%d%s", &V[G.vexnum].key, V[G.vexnum].others)) {
+                if (V[G.vexnum].key == -1)
+                    break;
+                G.vexnum++;
+            }
+            while (scanf("%d%d", &VR[G.arcnum][0], &VR[G.arcnum][1])) {
+                if (VR[G.arcnum][0] == -1)
+                    break;
+                G.arcnum++;
+            }
+
+            if (CreateGraph(G, V, VR) == OK) {
+                graphs.elem[graphs.amount].G = G; // 保存图到集合
+                printf("Graph create successfully \n");
+            } else
+                printf("Failed \n");
+
+            break;
+        }
+        case 2: {
+            if (G.vexnum <= 0) {
+                printf("The graph does not exist \n"); // 图不存在
+                break;
+            }
+            if (DestroyGraph(G) == OK)
+                printf("Destroy succeddfully \n"); // 销毁图
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 3: {
+            KeyType u;
+            printf("Input the key of the vex :");
+            scanf("%d", &u);
+            getchar();
+            int p = LocateVex(G, u);
+            if (p >= 0 && p < G.vexnum)
+                printf("The vex is (%d,%s) \n", G.vertices[p].data.key, G.vertices[p].data.others); // 查找顶点
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 4: {
+            KeyType u;
+            VertexType value;
+            printf("Input the key :");
+            scanf("%d", &u);
+            getchar();
+            int find = 0;
+            for (int i = 0; i < G.vexnum; i++) {
+                if (u == G.vertices[i].data.key) {
+                    find = 1;
+                }
+            }
+            if (find == 0) {
+                printf("The key does not exist \n"); // 顶点不存在
+                break;
+            }
+            printf("Input the value key and others :");
+            scanf("%d%s", &value.key, value.others);
+            getchar();
+            status p = PutVex(G, u, value);
+            if (p == OK)
+                printf("Put vex successfully \n"); // 修改顶点信息
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 5: {
+            KeyType u;
+            printf("Input the key :");
+            scanf("%d", &u);
+            getchar();
+            int p = FirstAdjVex(G, u);
+            if (p != -1)
+                printf("The first adjVex of u is (%d,%s) \n", G.vertices[p].data.key,
+                       G.vertices[p].data.others); // 查找第一个邻接点
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 6: {
+            KeyType v, w;
+            printf("Input the key of v and w :");
+            scanf("%d%d", &v, &w);
+            getchar();
+            int p = NextAdjVex(G, v, w);
+            if (p == -1)
+                printf("Failed \n");
+            else
+                printf("The next vex of w to v is (%d,%s) \n", G.vertices[p].data.key,
+                       G.vertices[p].data.others); // 查找下一个邻接点
+            break;
+        }
+        case 7: {
+            VertexType v;
+            printf("Input the key and others of v to insert :");
+            scanf("%d%s", &v.key, v.others);
+            getchar();
+            if (InsertVex(G, v) == OK)
+                printf("Insert vex successfully \n"); // 插入顶点
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 8: {
+            KeyType v;
+            printf("Input the key to delete :");
+            scanf("%d", &v);
+            getchar();
+            if (DeleteVex(G, v) == OK)
+                printf("Delete vex successfully \n"); // 删除顶点
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 9: {
+            KeyType v, w;
+            printf("Input the key of v w to insert :");
+            scanf("%d%d", &v, &w);
+            getchar();
+            if (InsertArc(G, v, w) == OK)
+                printf("Insert arc successfully \n"); // 插入边
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 10: {
+            KeyType v, w;
+            printf("Input the key of v w arc to delete :");
+            scanf("%d%d", &v, &w);
+            getchar();
+            if (DeleteArc(G, v, w) == OK)
+                printf("Delete arc successfully \n"); // 删除边
+            else
+                printf("Falied \n");
+            break;
+        }
+        case 11: {
+            if (!DFSTraverse(G, visit))
+                printf("Failed \n"); // 深度优先遍历
+            else
+                printf("\n");
+            break;
+        }
+        case 12: {
+            if (!BFSTraverse(G, visit))
+                printf("Failed \n"); // 广度优先遍历
+            else
+                printf("\n");
+            break;
+        }
+        case 13: {
+            if (G.vexnum <= 0)
+                printf("The graph does not exist \n");
+            else {
+                VertexType v;
+                int k;
+                printf("Input the key:");
+                scanf("%d", &v.key);
+                getchar();
+                int find = 0;
+                for (int i = 0; i < G.vexnum; i++) {
+                    if (v.key == G.vertices[i].data.key) {
+                        find = 1;
+                    }
+                }
+                if (find == 0) {
+                    printf("The key does not exist \n"); // 顶点不存在
+                    break;
+                }
+                printf("Input the distance :");
+                scanf("%d", &k);
+                status s = VerticesSetLessThanK(G, v, k);
+                if (s == ERROR)
+                    printf("Failed \n");
+            }
+            break;
+        }
+        case 14: {
+            VertexType v, w;
+            printf("Input the key of v w :");
+            scanf("%d%d", &v.key, &w.key);
+            getchar();
+            int pathlen = ShortestPathLength(G, v, w);
+            if (pathlen == -1)
+                printf("No path exists from %d to %d\n", v.key, w.key); // 无路径
+            break;
+        }
+        case 15: {
+            if (G.vexnum <= 0)
+                printf("The graph does not exist \n");
+            else {
+                int count = ConnectedComponentNums(G);
+                if (count > 0)
+                    printf("The number of connected component is %d \n", count); // 连通分量数
+                else
+                    printf("Failed \n");
+            }
+            break;
+        }
+        case 16: {
+            if (SaveGraph(G, filename) == OK)
+                printf("Save successfully \n"); // 保存图到文件
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 17: {
+            char name[20];
+            printf("Input the graph name to load : ");
+            scanf("%s", name);
+            getchar();
+            int find = 0;
+            for (int i = 0; i < graphs.amount; i++) {
+                if (strcmp(name, graphs.elem[i].name) == 0) {
+                    printf("The name has already existed \n");
+                    find = 1;
+                }
+            }
+            if (find == 1)
+                break;
+            ALGraph g;
+            if (LoadGraph(g, filename) == OK)
+                printf("Load successfully \n"); // 加载图
+            else
+                printf("Failed \n");
+            printf("Do you want to check the graph(Y/N) : ");
+            char opt;
+            scanf("%c", &opt);
+            getchar();
+            if (opt == 'Y' || opt == 'y') {
+                for (int i = 0; i < g.vexnum; i++) {
+                    printf("%d %s ", g.vertices[i].data.key, g.vertices[i].data.others);
+                    ArcNode *p = g.vertices[i].firstarc;
+                    while (p) {
+                        printf("%d ", p->adjvex);
+                        p = p->nextarc;
+                    }
+                    printf("\n");
+                }
+            }
+            graphs.elem[graphs.amount].G = g;
+            strcpy(graphs.elem[graphs.amount++].name, name);
+            G = g;
+            printf("\n");
+            break;
+        }
+        case 18: {
+            printf("Input the name to add : ");
+            char name[20];
+            scanf("%s", name);
+            getchar();
+            int find = 0;
+            for (int i = 0; i < graphs.amount; i++) {
+                if (strcmp(name, graphs.elem[i].name) == 0) {
+                    printf("The name has already existed \n");
+                    find = 1;
+                }
+            }
+            if (find == 1)
+                break;
+            if (AddGraph(graphs, name) == OK) {
+                VertexType V[100];
+                KeyType VR[100][2];
+                int vexnum = 0, arcnum = 0;
+                printf("Input the vexs and keys definition :");
+                while (scanf("%d%s", &V[vexnum].key, V[vexnum].others)) {
+                    if (V[vexnum].key == -1)
+                        break;
+                    vexnum++;
+                }
+                while (scanf("%d%d", &VR[arcnum][0], &VR[arcnum][1])) {
+                    if (VR[arcnum][0] == -1)
+                        break;
+                    arcnum++;
+                }
+                if (CreateGraph(graphs.elem[graphs.amount - 1].G, V, VR) == OK) {
+                    printf("Add successfully \n"); // 添加图
+                    G = graphs.elem[graphs.amount - 1].G;
+                } else
+                    printf("Failed \n");
+            }
+            break;
+        }
+        case 19: {
+            printf("Input the name to remove : ");
+            char name[20];
+            scanf("%s", name);
+            getchar();
+            if (RemoveGraph(graphs, name) == OK)
+                printf("Remove successfully \n"); // 移除图
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 20: {
+            printf("Input the name to locate : ");
+            char name[20];
+            scanf("%s", name);
+            getchar();
+            int pos = LocateGraph(graphs, name);
+            if (pos)
+                printf("The position is %d \n ", pos); // 查找图在集合中的位置
+            else
+                printf("The graph does not exist \n");
+            break;
+        }
+        case 21: {
+            printf("Input the name to switch :");
+            char name[20];
+            scanf("%s", name);
+            getchar();
+            if (SwitchGraph(graphs, name, G) == OK)
+                printf("Switch successfully \n"); // 切换当前图
+            else
+                printf("Failed \n");
+            break;
+        }
+        case 22: {
+            ShowAllGraphs(graphs); // 显示所有图及内容
+            break;
+        }
+        default:
+            break;
+        }
+    }
+    printf("Welcome to the system next time \n"); // 退出提示
+}
 \end{lstlisting}
+
 \end{document}
