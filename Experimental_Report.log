@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2024.11.27)  4 JUN 2025 22:25
+This is XeTeX, Version 3.141592653-2.6-0.999996 (MiKTeX 24.4) (preloaded format=xelatex 2024.11.27)  9 JUN 2025 18:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2261,7 +2261,7 @@ Package rerunfilecheck Info: File `Experimental_Report.out' has not changed.
 Here is how much of TeX's memory you used:
  43447 strings out of 408789
  1019974 string characters out of 5748697
- 1892763 words of memory out of 5000000
+ 1892762 words of memory out of 5000000
  65618 multiletter control sequences out of 15000+600000
  575736 words of font info for 161 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
